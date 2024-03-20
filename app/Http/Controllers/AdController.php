@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Ad;
 use Illuminate\Http\Request;
 
-class AdsController extends Controller
+class AdController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +19,7 @@ class AdsController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function createAd()
     {
         return view('ads.create');
     }
@@ -31,7 +31,7 @@ class AdsController extends Controller
     {
         $validated= $request->validated();
         Ad::create(['author'=>auth()->user()->name, 'title'=>$validated['title'],'description'=>$validated['description'],'price'=>$validated['price']]);
-        return redirect()->back()->with(['success'=>'Libro inserito con successo']);
+        return redirect()->back()->with(['success'=>'Annuncio inserito con successo']);
     }
 
     /**

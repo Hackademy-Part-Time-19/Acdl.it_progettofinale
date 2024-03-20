@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdController;
 use App\Http\Controllers\AdsController;
 
 
@@ -19,4 +20,6 @@ Route::get('/', function () {
     return view('home');
 })->name('home') ;
 
-Route::resource('ads',AdsController::class);
+Route::get('/nuovo/annuncio',[AdController::class,'createAd'])->name('ads.create');
+
+Route::get('/annunci',[AdController::class,'index'])->name('ads.index');
