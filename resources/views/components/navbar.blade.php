@@ -35,9 +35,11 @@
     </div>
   </nav> -->
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid p-1" style="background-image: radial-gradient(circle, #420d48 0%, #293f44 100%);;padding: 0px;">
-        <a style="font-weight: 1600; padding-left: 30px;color: #DFDFDF; font-size:30px" class="navbar-brand" href="{{ route('home') }}">Bookstore</a>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid p-1"
+        style="background-image: radial-gradient(circle, #420d48 0%, #293f44 100%);;padding: 0px;">
+        <a style="font-weight: 1600; padding-left: 30px;color: #DFDFDF; font-size:30px" class="navbar-brand"
+            href="{{ route('home') }}">Bookstore</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -48,30 +50,37 @@
             </div>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 linkNavBar">
                 <li class="nav-item">
-                    <a style="color: #DFDFDF; font-size:20px" class="nav-link active" aria-current="page" href=" {{ route('home') }}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a style="color: #DFDFDF; font-size:20px"class="nav-link active" aria-current="page" href="{{route('ads.index')}}">Annunci</a>
+                    <a style="color: #DFDFDF; font-size:20px" class="nav-link active" aria-current="page"
+                        href=" {{ route('home') }}">Home</a>
                 </li>
                 @auth
-                <li class="nav-item">
-                    <a style="color: #DFDFDF; font-size:20px"class="nav-link" href="{{route('ads.create')}}">Inserisci un annuncio</a>
-                </li>
-                @endauth
-                @guest
                     <li class="nav-item">
-                        <a style="color: #DFDFDF; font-size:20px" class="nav-link active" aria-current="page" href="/login">Login</a>
+                        <a style="color: #DFDFDF; font-size:20px"class="nav-link active" aria-current="page"
+                            href="{{ route('ads.index') }}">Annunci</a>
                     </li>
 
                     <li class="nav-item">
-                        <a style="color: #DFDFDF; font-size:20px" class="nav-link active" aria-current="page" href="/register">Registrati</a>
+                        <a style="color: #DFDFDF; font-size:20px"class="nav-link" href="{{ route('ads.create') }}">Inserisci
+                            un annuncio</a>
+                    </li>
+                @endauth
+                @guest
+                    <li class="nav-item">
+                        <a style="color: #DFDFDF; font-size:20px" class="nav-link active" aria-current="page"
+                            href="/login">Login</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a style="color: #DFDFDF; font-size:20px" class="nav-link active" aria-current="page"
+                            href="/register">Registrati</a>
                     </li>
                 @endguest
                 @auth
                     <li style="margin-top: 5px; margin-left: 10px" class="nav-item">
                         <form style="margin-right: 10px" action="/logout" method="POST">
                             @csrf
-                            <button style="
+                            <button
+                                style="
                             align-items: center;
                             background-color: rgba(240, 240, 240, 0.26);
                             border: 1px solid hsl(0, 0%, 100%);
@@ -111,8 +120,7 @@
                             padding: 10px 15px;
                             }
                             }"
-                            type="submit" class="button-46"
-                                role="button">Logout</button>
+                                type="submit" class="button-46" role="button">Logout</button>
                         </form>
                     </li>
                 @endauth
@@ -120,4 +128,3 @@
         </div>
     </div>
 </nav>
-

@@ -17,10 +17,10 @@ return new class extends Migration
             $table->string('name');
             $table->timestamps();
         });
-$categories=['Motori','Informatica','Elettrodomestici e domotica','Libri','Giochi','Musica','Sport','Immobili','Arredamento','Telefonia'];
-foreach($categories as $category) {Category::create(['name'=>$category]);
-}
-
+        $categories = ['Motori', 'Informatica', 'Elettrodomestici e domotica', 'Libri', 'Giochi', 'Musica', 'Sport', 'Immobili', 'Arredamento', 'Telefonia'];
+        foreach ($categories as $category) {
+            Category::create(['name' => $category]);
+        }
     }
 
     /**

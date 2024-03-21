@@ -12,8 +12,8 @@ class AdController extends Controller
      */
     public function index()
     {
-        $ads= Ad::all();
-        return view('ads.index',compact('ads'));
+        $ads = Ad::all();
+        return view('ads.index', compact('ads'));
     }
 
     /**
@@ -29,9 +29,9 @@ class AdController extends Controller
      */
     public function store(Request $request)
     {
-        $validated= $request->validated();
-        Ad::create(['author'=>auth()->user()->name, 'title'=>$validated['title'],'description'=>$validated['description'],'price'=>$validated['price']]);
-        return redirect()->back()->with(['success'=>'Annuncio inserito con successo']);
+        $validated = $request->validated();
+        Ad::create(['author' => auth()->user()->name, 'title' => $validated['title'], 'description' => $validated['description'], 'price' => $validated['price']]);
+        return redirect()->back()->with(['success' => 'Annuncio inserito con successo']);
     }
 
     /**

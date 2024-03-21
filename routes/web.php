@@ -18,8 +18,8 @@ use App\Http\Controllers\AdsController;
 
 Route::get('/', function () {
     return view('home');
-})->name('home') ;
+})->name('home');
 
-Route::get('/nuovo/annuncio',[AdController::class,'createAd'])->name('ads.create');
+Route::get('/nuovo/annuncio', [AdController::class, 'createAd'])->middleware('auth')->name('ads.create');
 
-Route::get('/annunci',[AdController::class,'index'])->name('ads.index');
+Route::get('/annunci', [AdController::class, 'index'])->name('ads.index');

@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+
+use View;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -17,7 +19,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME ='/annunci.index';
+    public const HOME = '/nuovo/annuncio';
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
