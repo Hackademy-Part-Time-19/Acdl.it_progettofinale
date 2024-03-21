@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdController;
 use App\Http\Controllers\AdsController;
-
+use App\Http\Controllers\FrontController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +16,14 @@ use App\Http\Controllers\AdsController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [FrontController::class, 'home'])->name('home');
+
+
 
 Route::get('/nuovo/annuncio', [AdController::class, 'createAd'])->middleware('auth')->name('ads.create');
 
 Route::get('/annunci', [AdController::class, 'index'])->name('ads.index');
+
+Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('categoryShow');
+
+Route::get('/dettaglio/annuncio/{ad}', [AdController::class, 'show1'])->name('ads.show');

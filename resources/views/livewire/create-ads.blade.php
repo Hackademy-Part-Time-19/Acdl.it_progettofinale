@@ -10,7 +10,8 @@
 
                     <div class="mb-3">
                         <label for="title" class="form-label" style="color: black">Titolo</label>
-                        <input wire:model="title" type="text" class="form-control @error('title')is-invalid @enderror">
+                        <input wire:model.live="title" type="text"
+                            class="form-control @error('title')is-invalid @enderror">
 
                         @error('title')
                             {{ $message }}
@@ -18,7 +19,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="price" class="form-label" style="color: black">Prezzo</label>
-                        <input wire:model="price" type="decimal"
+                        <input wire:model.live="price" type="decimal"
                             class="form-control  @error('price')is-invalid @enderror">
 
                         @error('price')
@@ -27,7 +28,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label" style="color: black">Descrizione</label>
-                        <input wire:model="description" type="text"
+                        <input wire:model.live="description" type="text"
                             class="form-control  @error('description')is-invalid @enderror">
 
                         @error('description')

@@ -37,9 +37,9 @@ class AdController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+        return view('ads.show', compact('ad'));
     }
 
     /**
@@ -64,5 +64,10 @@ class AdController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function show1(ad $ad)
+    {
+        return view('ads.show', compact('ad'));
     }
 }

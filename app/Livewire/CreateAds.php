@@ -44,7 +44,7 @@ class CreateAds extends Component
         $this->cleanForm();
     }
 
-    public function update($propertyName)
+    public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
     }
