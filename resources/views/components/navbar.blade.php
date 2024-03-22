@@ -26,17 +26,14 @@
                         @foreach ($categories as $category)
                             <li><a class="dropdown-item"
                                     href="{{ route('categoryShow', compact('category')) }}">{{ $category->name }}</a>
-                            <li>
+                            </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                         @endforeach
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a style="color: #DFDFDF; font-size:20px"class="nav-link active" aria-current="page"
-                        href="{{ route('ads.index') }}">Annunci</a>
-                </li>
+
                 @auth
                     <li class="nav-item">
                         <a style="color: #DFDFDF; font-size:20px"class="nav-link" href="{{ route('ads.create') }}">Inserisci
