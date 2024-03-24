@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid p-1"
-        style="background-image: radial-gradient(circle, #420d48 0%, #293f44 100%);;padding: 0px;">
+    <div class="container-fluid"
+        style="background-image: radial-gradient(circle, #4e1244 0%, #174b57 100%);background-size: 100% auto; ">
         <a style="font-weight: 1600; padding-left: 30px;color: #DFDFDF; font-size:30px" class="navbar-brand"
             href="{{ route('home') }}">Presto.it</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

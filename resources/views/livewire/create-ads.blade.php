@@ -60,18 +60,14 @@
 
 
                     </div>
-                    @error('category')
-                        <p>{{ $message }}</p>
-                    @enderror
-
-
+                   
                     @if (session()->has('message'))
                         <div class="alert alert-success">
                             {{ session('message') }}
                         </div>
                     @endif
 
-                    <button type="submit" class="btn btn-success">Salva</button>
+                    <button style="border-radius:2px" type="submit" class="submit">Salva</button>
 
 
                 </form>

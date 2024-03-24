@@ -24,7 +24,7 @@
                                     <a href="{{ route('ads.show', compact('ad')) }}"class="btn btn-primary shadow">Visualizza
                                         dettagli</a>
 
-                                    <p class='card-footer my-2'>Pubblicato il {{ $ad->created_at->format('d/m/Y') }}
+                                    <p class='card-footer my-2'>Pubblicato il {{ $ad->created_at->format('d/m/Y H:i') }}
 
                                 </div>
                             </div>

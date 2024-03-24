@@ -1,6 +1,6 @@
 <x-layout>
-    <h1>Ecco i nostri annunci</h1>
-    <div style="margin-left:10px; margin-right:10px">
+    <h1 style="text-align:center">Ecco i nostri annunci</h1>
+    <div style="margin-left:30px; margin-right:30px">
         <div class="row" style="display: flex; justify-ontent:space-between;">
 
             @foreach ($ads as $ad)
@@ -15,7 +15,7 @@
                         <a href="{{ route('categoryShow', ['category' => $ad->category]) }}"
                             class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria:
                             {{ $ad->category->name }}</a>
-                        <p class='card-footer'>Pubblicato il {{ $ad->created_at->format('d/m/Y') }}</p>
+                        <p class='card-footer'>Pubblicato il {{ $ad->created_at->format('d/m/Y H:i') }}</p>
                     </div>
                 </div>
             @endforeach
