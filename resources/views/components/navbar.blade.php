@@ -39,7 +39,7 @@
                         <a style="color: #DFDFDF; font-size:20px"class="nav-link" href="{{ route('ads.create') }}">Inserisci
                             un annuncio</a>
                     </li>
-                @endauth
+                
                 @if (Auth::user()->is_revisor)
                 <li class="nav-item">
                     <a style="color: #DFDFDF; font-size:20px" class="nav-link btn btn-outline-succes btn-sm position-relative" 
@@ -53,6 +53,7 @@
 
                 </li>
                 @endif
+                @endauth
                 @guest
                     <li class="nav-item">
                         <a style="color: #DFDFDF; font-size:20px" class="nav-link active" aria-current="page"
