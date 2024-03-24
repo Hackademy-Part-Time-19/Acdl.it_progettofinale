@@ -1,4 +1,19 @@
 <x-layout>
+     <div class="is-preload">
+
+        <!-- Page Wrapper -->
+        <div id="page-wrapper">
+    
+            <!-- Banner -->
+            <section id="banner" >
+                <div class="inner">
+                    <h2>Presto.it</h2>
+                    <p>You made the right choise!</p>
+                </div>
+            </section>
+    
+        </div>
+    </div>
     <h1 style="text-align:center">Ecco i nostri annunci</h1>
     <div style="margin-left:30px; margin-right:30px">
         <div class="row" style="display: flex; justify-ontent:space-between;">

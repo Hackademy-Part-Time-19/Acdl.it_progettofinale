@@ -40,6 +40,19 @@
                             un annuncio</a>
                     </li>
                 @endauth
+                @if (Auth::user()->is_revisor)
+                <li class="nav-item">
+                    <a style="color: #DFDFDF; font-size:20px" class="nav-link btn btn-outline-succes btn-sm position-relative" 
+                    aria-current="page" href="{{route('revisor.index')}}">
+                    Area revisore
+                    <span style="color: #DFDFDF; font-size:20px" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        {{App\Models\Ad::toBeRevisionedCount()}}
+                        <span style="color: #DFDFDF; font-size:20px" class="visually-hidden">unread messages</span>
+                    </span>
+                </a>
+
+                </li>
+                @endif
                 @guest
                     <li class="nav-item">
                         <a style="color: #DFDFDF; font-size:20px" class="nav-link active" aria-current="page"
