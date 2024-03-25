@@ -30,8 +30,12 @@ Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->n
 Route::get('/dettaglio/annuncio/{ad}', [AdController::class, 'show1'])->name('ads.show');
 
 //*Home revisore
-Route::get('/revisor/home',[RevisorController::class,'index'])->name('revisor.index');
+Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('RevisorCheck')->name('revisor.index');
 //*Accetta annuncio
-Route::patch('/accetta/annuncio/{ad}',[RevisorController::class,'acceptAd'])->name('revisor.accept_ad');
+Route::patch('/accetta/annuncio/{ad}', [RevisorController::class, 'acceptAd'])->middleware('RevisorCheck')->name('revisor.accept_ad');
 //*Rifiuta annuncio
-Route::patch('/rifiuta/annuncio/{ad}',[RevisorController::class,'rejectAd'])->name('revisor.reject_ad');
+Route::patch('/rifiuta/annuncio/{ad}', [RevisorController::class, 'rejectAd'])->middleware('RevisorCheck')->name('revisor.reject_ad');
+
+Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+
+Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');

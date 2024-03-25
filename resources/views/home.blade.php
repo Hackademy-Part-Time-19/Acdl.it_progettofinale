@@ -1,4 +1,9 @@
 <x-layout>
+    @if (session('access.denied'))
+        <div class="alert alert-danger">
+            {{ session('access.denied') }}
+        </div>
+    @endif
     <div class="is-preload">
 
         <!-- Page Wrapper -->

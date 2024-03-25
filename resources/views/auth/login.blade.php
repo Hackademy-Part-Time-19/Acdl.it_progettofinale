@@ -4,6 +4,7 @@
             <div class="col-lg-4 mx-auto">
                 <form class="mt-5" action="/login" method="POST">
                     @csrf
+                    <h1>Accedi</h1>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
                         <input name="email" type="email" class="form-control" id="email">

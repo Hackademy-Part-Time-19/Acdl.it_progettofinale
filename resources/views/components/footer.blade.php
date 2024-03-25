@@ -11,7 +11,8 @@
                     <form action="#" class="subscribe-form w-100">
                         <div class="form-group d-flex">
                             <input type="text" class="form-control rounded-left" placeholder="Enter email address">
-                            <button type="submit" class="form-control submit"><span>Submit</span></button>
+                            <button type="submit" class="form-control submit"><span
+                                    href="{{ route('become.revisor') }}">Invia</span></button>
                         </div>
                     </form>
                 </div>
@@ -20,4 +21,5 @@
                 <h2 class="footer-heading">Developed by aclm.it</h2>
                 <p><span>Antonio Susca &nbsp; Claudia Matei &nbsp; Lorenzo Provvedi &nbsp; Mattia Cursi</span></p>
             </div>
+        </div>
     </footer>
