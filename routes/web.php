@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdController;
 
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
 
 /*
@@ -39,3 +40,6 @@ Route::patch('/rifiuta/annuncio/{ad}', [RevisorController::class, 'rejectAd'])->
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+Route::get('/careers' , [FrontController::class, 'careers'])->name('careers');
+Route::post('/careers/submit', [FrontController::class, 'careersSubmit'])->name('careers.submit');
