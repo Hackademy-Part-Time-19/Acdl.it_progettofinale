@@ -10,12 +10,16 @@ class FrontController extends Controller
 {
     public function home()
     {
-        $ads = Ad::take(10)->get()->sortByDesc('created_at');
+        $ads = Ad::orderBy('created_at', 'desc')->take(10)->get();
         return view('home', compact('ads'));
     }
 
-    public function categoryshow(Category $category)
+    public function categoryShow(Category $category)
     {
-        return view('categoryShow', compact('category'));
+        $adscategory = Ad::where('category_id', $category->id)
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return view('categoryShow', compact('category', 'adscategory'));
     }
 }

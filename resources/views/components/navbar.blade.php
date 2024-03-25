@@ -3,6 +3,10 @@
         style="background-image: radial-gradient(circle, #420d48 0%, #293f44 100%);;padding: 0px;">
         <a style="font-weight: 1600; padding-left: 30px;color: #DFDFDF; font-size:30px" class="navbar-brand"
             href="{{ route('home') }}">Presto.it</a>
+        @auth
+            <p style="font-weight: 1600; padding-left: 30px;color: #DFDFDF; font-size:20px;margin-bottom:0px;">Benvenuto
+                {{ Auth::user()->name }}</p>
+        @endauth
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

@@ -4,7 +4,7 @@
         <div class="row" style="display: flex; justify-ontent:space-between;">
 
             @foreach ($ads as $ad)
-                <div class="col-12 col-md-3 ">
+                <div class="col-12 col-md-4 ">
                     <img src="..." class="card-img-top p-3 rounded" alt="...">
                     <div style="overflow: hidden; text-overflow: ellipsis;margin-right:10px;" class="card-body">
                         <h5 class="card-title">{{ $ad->title }}</h5>
@@ -16,6 +16,8 @@
                             class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria:
                             {{ $ad->category->name }}</a>
                         <p class='card-footer'>Pubblicato il {{ $ad->created_at->format('d/m/Y') }}</p>
+
+
                     </div>
                 </div>
             @endforeach
