@@ -1,8 +1,12 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid p-1"
-        style="background-image: radial-gradient(circle, #420d48 0%, #293f44 100%);;padding: 0px;">
+    <div class="container-fluid"
+        style="background-image: radial-gradient(circle, #4e1244 0%, #174b57 100%);background-size: 100% auto; ">
         <a style="font-weight: 1600; padding-left: 30px;color: #DFDFDF; font-size:30px" class="navbar-brand"
             href="{{ route('home') }}">Presto.it</a>
+        @auth
+            <p style="font-weight: 1600; padding-left: 30px;color: #DFDFDF; font-size:20px;margin-bottom:0px;">Benvenuto
+                {{ Auth::user()->name }}</p>
+        @endauth
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -24,25 +28,35 @@
 
                     <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
                         @foreach ($categories as $category)
-                        <li><a class="dropdown-item"
-                            href="{{ route('categoryShow', compact('category')) }}">{{ $category->name }}</a>
+                            <li><a class="dropdown-item"
+                                    href="{{ route('categoryShow', compact('category')) }}">{{ $category->name }}</a>
+                            </li>
                             <li>
-                                <li>
-                                <li>
                                 <hr class="dropdown-divider">
                             </li>
                         @endforeach
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a style="color: #DFDFDF; font-size:20px"class="nav-link active" aria-current="page"
-                        href="{{ route('ads.index') }}">Annunci</a>
-                </li>
+
                 @auth
                     <li class="nav-item">
                         <a style="color: #DFDFDF; font-size:20px"class="nav-link" href="{{ route('ads.create') }}">Inserisci
                             un annuncio</a>
                     </li>
+
+                @if (Auth::user()->is_revisor)
+                <li class="nav-item">
+                    <a style="color: #DFDFDF; font-size:20px" class="nav-link btn btn-outline-succes btn-sm position-relative"
+                    aria-current="page" href="{{route('revisor.index')}}">
+                    Area revisore
+                    <span style="color: #DFDFDF; font-size:20px" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        {{App\Models\Ad::toBeRevisionedCount()}}
+                        <span style="color: #DFDFDF; font-size:20px" class="visually-hidden">unread messages</span>
+                    </span>
+                </a>
+
+                </li>
+                @endif
                 @endauth
                 @guest
                     <li class="nav-item">

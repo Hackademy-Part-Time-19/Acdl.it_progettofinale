@@ -15,11 +15,13 @@ class CreateAds extends Component
     public $price;
     public $category;
 
+
     protected $rules = [
         'title' => 'required',
         'description' => 'required|min:10',
         'price' => 'required|numeric',
         'category' => 'required',
+
     ];
 
     protected $messages = [

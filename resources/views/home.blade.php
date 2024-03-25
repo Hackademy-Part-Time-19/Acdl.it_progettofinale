@@ -1,10 +1,30 @@
 <x-layout>
-    <h1>Ecco i nostri annunci</h1>
-    <div style="margin-left:10px; margin-right:10px">
+    @if (session('access.denied'))
+        <div class="alert alert-danger">
+            {{ session('access.denied') }}
+        </div>
+    @endif
+    <div class="is-preload">
+
+        <!-- Page Wrapper -->
+        <div id="page-wrapper">
+
+            <!-- Banner -->
+            <section id="banner">
+                <div class="inner">
+                    <h2>Presto.it</h2>
+                    <p>You made the right choise!</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <h1 style="text-align:center">Ecco i nostri annunci</h1>
+    <div style="margin-left:30px; margin-right:30px">
         <div class="row" style="display: flex; justify-ontent:space-between;">
 
             @foreach ($ads as $ad)
-                <div class="col-12 col-md-3 ">
+                <div class="col-12 col-md-4 ">
                     <img src="..." class="card-img-top p-3 rounded" alt="...">
                     <div style="overflow: hidden; text-overflow: ellipsis;margin-right:10px;" class="card-body">
                         <h5 class="card-title">{{ $ad->title }}</h5>
@@ -15,7 +35,7 @@
                         <a href="{{ route('categoryShow', ['category' => $ad->category]) }}"
                             class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria:
                             {{ $ad->category->name }}</a>
-                        <p class='card-footer'>Pubblicato il {{ $ad->created_at->format('d/m/Y') }}</p>
+                        <p class='card-footer'>Pubblicato il {{ $ad->created_at->format('d/m/Y H:i') }}</p>
                     </div>
                 </div>
             @endforeach
