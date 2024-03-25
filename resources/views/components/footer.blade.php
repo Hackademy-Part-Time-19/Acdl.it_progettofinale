@@ -11,8 +11,9 @@
                     <form action="#" class="subscribe-form w-100">
                         <div class="form-group d-flex">
                             <input type="text" class="form-control rounded-left" placeholder="Enter email address">
-                            <button type="submit" class="form-control submit"><span
-                                    href="{{ route('become.revisor') }}">Invia</span></button>
+                            <button type="submit" class="form-control submit"><a
+                                    href="{{ route('become.revisor') }}">Invia</a></button>
+                            </button>
                         </div>
                     </form>
                 </div>
