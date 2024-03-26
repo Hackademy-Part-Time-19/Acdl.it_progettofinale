@@ -119,6 +119,11 @@
                     </li>
                 @endauth
             </ul>
+            <form action="{{route('ads.search')}}" method="GET" class="d-flex">
+                @csrf
+                <input type="search" name="searched" class="form-control me-2" placeholder="search" aria-label="search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
     </div>
 </nav>

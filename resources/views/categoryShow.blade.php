@@ -2,7 +2,11 @@
     <div class="container-fluid p-5 bg-gradient bg-success shadow mb-4">
         <div class="row">
             <div class="col-12 text-light p-5">
-                <h1 class="display-2">Esplora la categoria {{ $category->name }}<h1>
+                @if (count($ads)>0)
+                <h1 class="display-2">Esplora la categoria {{ $ads[0]->category->name }}<h1>
+                    @else
+                    <h1>Non ci sono annunci per la tua ricerca</h1>
+                @endif
             </div>
         </div>
     </div>
@@ -12,8 +16,7 @@
                 <div class="row">
 
 
-
-                    @forelse ($adscategory as $ad)
+                    @forelse ($ads as $ad)
                         <div class="col-12 col-md-4 my-2">
                             <div class="card shadow" style="width: 18rem;">
                                 <img src="..." class="card-img-top p-3 rounded" alt="...">

@@ -19,18 +19,33 @@ class Ad extends Model
         return $this->belongsTo(category::class);
     }
 
+    public function toSearchableArray()
+    {
+        $category = $this->category;
+        $array = [
+            'id' => $this->id,
+            'title' => $this->title,
+            'description' => $this->description,
+            'category' => $category->name,
+        ];
+        return $array;
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function setAccepted($value){
+    public function setAccepted($value)
+    {
         $this->is_accepted = $value;
         $this->save();
         return true;
     }
 
-    public static function toBeRevisionedCount(){
+    public static function toBeRevisionedCount()
+    {
         return Ad::where('is_accepted', null)->count();
     }
+
 }
