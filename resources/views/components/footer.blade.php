@@ -1,6 +1,6 @@
     <footer class="footer-06" style="margin-top: 7rem">
         <div class="container">
-            <div class="row align-items-center align-items-stretch mb-5" style="margin-top: 2rem">
+            <div class="row align-items-center align-items-stretch mb-5" style="margin-top: 3rem">
                 <div class="col-md-4 py-4 py-md-5 aside-stretch d-flex align-items-center">
                     <div class="w-100">
                         <span class="subheading">LAVORA CON NOI</span>

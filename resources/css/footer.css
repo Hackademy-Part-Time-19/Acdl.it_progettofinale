@@ -1,59 +1,30 @@
 @import'bootstrap';
-
 .footer-06 {
     padding-top: 0 !important;
-    background: #174b57 ;
+    background: #3F2E3E ;
     position: relative;
     overflow: hidden;
     z-index: 0;
 }
-
-.footer-06:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    opacity: .2;
-    z-index: -1;
-    background-image: radial-gradient(circle, #4e1244 0%, #174b57 100%);
-    background-size: 100% auto;
-    background-image: radial-gradient(circle, #4e1244 0%, #174b57 100%);
-    background-size: 100% auto;
-    background-image: radial-gradient(circle, #4e1244 0%, #174b57 100%);
-    background-size: 100% auto;
-    background-image: radial-gradient(circle, #4e1244 0%, #174b57 100%);
-    background-size: 100% auto;
-    background-image: radial-gradient(circle, #4e1244 0%, #174b57 100%);
-    background-size: 100% auto;
-    background-image: -ms-radial-gradient(center, ellipse cover, #4c1152 0%, #174b57 100%);
-    background-image: -webkit-radial-gradient(center, ellipse, #4c1152 0%, #174b57 100%);
-    background-image: -o-radial-gradient(center, ellipse, #4c1152 0%, #174b57 100%);
-    background-image: radial-gradient(ellipse at center, #4c1152 0%, #174b57 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c1152', endColorstr='#ffffff', GradientType=1);
-}
-
 .footer-06 .subheading {
-    color: rgba(255, 255, 255, 0.3);
+    color: #c0c0c0;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
-
 .footer-06 .heading-section {
-    color: #fff;
+    color:  #eeeae8;
     font-size: 20px;
     text-transform: uppercase;
 }
 
 .footer-06 .footer-heading {
     font-size: 20px;
-    color: #fff;
+    color:  #eeeae8;
     margin-bottom: 20px;
 }
 
 .footer-06 .footer-heading .logo {
-    color: #fff;
+    color: #eeeae8;
 }
 
 .footer-06 p {
@@ -61,26 +32,20 @@
 }
 
 .footer-06 a {
-    color: #fff;
+    color:  #eeeae8;
 }
 
 .footer-06 .subscribe-form {
     border-radius: 40px;
-    background: #fff;
+    background: #eeeae8;
     padding: 3px;
-}
-
-.footer-06 .subscribe-form .form-group {
-    position: relative;
-    margin-bottom: 0;
-    border-radius: 0;
 }
 
 .footer-06 .subscribe-form .form-group input {
     background: transparent !important;
     border: none !important;
     outline: none !important;
-    background-image: radial-gradient(circle, #4e1244 0%, #174b57 100%);
+    background-image: radial-gradient(circle, #96c8da 0%, #174b57 100%);
     background-size: 100% auto !important;
     font-size: 16px;
     height: 56px;
@@ -114,17 +79,17 @@
 }
 
 .footer-06 .subscribe-form .form-group .submit {
-    color: #fff !important;
+    color: #eeeae8 !important;
     display: block;
     width: 150px;
     height: 56px;
     font-size: 14px;
-    background-image: radial-gradient(circle, #4e1244 0%, #174b57 100%);
     background-size: 100% auto !important;
     border: none;
     letter-spacing: 1px;
     text-transform: uppercase;
     border-radius: 40px;
+    background-color: #1E3A3A;
 }
 
 .footer-06 .subscribe-form .form-group .submit:hover,
@@ -134,24 +99,15 @@
 }
 
 .footer-06 .aside-stretch {
-    background-image: radial-gradient(circle, #4e1244 0%, #174b57 100%);
-    background-size: 100% auto;
-}
-
-.footer-06 .aside-stretch:after {
-    background-image: radial-gradient(circle, #4e1244 0%, #174b57 100%);
+    background-image: linear-gradient(top left, #A87C7C , #3F2E3E 100%);
     background-size: 100% auto;
 }
 
 .footer-06 .aside-stretch-right {
-    background-image: radial-gradient(circle, #4e1244 0%, #174b57 100%);
+    background-image: radial-gradient(circle, #A87C7C 0%, #3F2E3E 100%);
     background-size: 100% auto;
 }
 
-.footer-06 .aside-stretch-right:after {
-    background-image: radial-gradient(circle, #4e1244 0%, #174b57 100%);
-    background-size: 100% auto;
-}
 
 .row {
     --bs-gutter-x: 7rem;
@@ -173,17 +129,17 @@
 
     #banner .inner {
         margin: 0 auto;
-        width: 55em;
-        
+        width: 100%;
+
     }
 
-       
+
     @media screen and (max-width: 1280px) {
 
         #banner {
             padding: 7em 0 8.25em 0 ;
-            background-color: #2e3141;
-            background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("./public/immagini/bg.jpg");
+            background-color: #eeeae8 ;
+            background-image: linear-gradient(to top,  #eeeae8,  #eeeae8), url("./public/immagini/bg.jpg");
             background-size: auto,
 cover;
             background-position: center,
@@ -231,4 +187,3 @@ center;
 
     }
 
-   

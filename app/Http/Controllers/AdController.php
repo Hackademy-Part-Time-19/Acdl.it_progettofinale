@@ -71,3 +71,5 @@ class AdController extends Controller
         return view('ads.show', compact('ad'));
     }
 }
+
+

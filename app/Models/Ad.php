@@ -12,6 +12,8 @@ class Ad extends Model
     use HasFactory, Searchable;
     protected $fillable = ['title', 'price', 'description', 'image',];
 
+
+
     public function category()
     {
         return $this->belongsTo(category::class);
