@@ -36,7 +36,7 @@
                     <br>
                     <p>Già registrato?<a href="{{ route('login') }}"><br>Clicca qui</a></p>
 
-                    <button type="submit" class="btn btn-primary">Register</button>
+                    <button type="submit" class="btn-primary">Register</button>
                 </form>
             </div>
         </div>

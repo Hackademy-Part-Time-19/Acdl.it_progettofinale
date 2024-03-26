@@ -22,4 +22,5 @@ class FrontController extends Controller
 
         return view('categoryShow', compact('category', 'adscategory'));
     }
+
 }

@@ -13,18 +13,20 @@
 
 
 
-                    @forelse ($category->ads as $ad)
-                        <div class="col-12 col-md-4 my-4" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div style="overflow: hidden; text-overflow: ellipsis" class="card-body">
-                                <h5 class="card-title">{{ $ad->title }}</h5>
-                                <h6 class="card-text">{{ $ad->description }}</h6>
-                                <h6 class="card-text">{{ $ad->price }}</h6>
-                                <button>Visualizza dettagli</button>
-                                <button>{{ $ad->category->name }}</button>
-                                <p class='card-footer'>Pubblicato il {{ $ad->created_at->format('d/m/Y') }} -
-                                    author:{{ $ad->user->name ?? '' }}</p>
+                    @forelse ($adscategory as $ad)
+                        <div class="col-12 col-md-4 my-2">
+                            <div class="card shadow" style="width: 18rem;">
+                                <img src="..." class="card-img-top p-3 rounded" alt="...">
+                                <div style="overflow: hidden; text-overflow: ellipsis" class="card-body">
+                                    <h5 class="card-title">{{ $ad->title }}</h5>
+                                    <p class="card-text">{{ $ad->description }}</p>
+                                    <p class="card-text">{{ $ad->price }}</p>
+                                    <a href="{{ route('ads.show', compact('ad')) }}"class="btn btn-primary shadow">Visualizza
+                                        dettagli</a>
 
+                                    <p class='card-footer my-2'>Pubblicato il {{ $ad->created_at->format('d/m/Y H:i') }}
+
+                                </div>
                             </div>
                         </div>
                     @empty

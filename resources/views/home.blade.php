@@ -10,7 +10,7 @@
         <div id="page-wrapper">
 
             <!-- Banner -->
-            <section id="banner">
+            <section id="banner" style="margin: 40px">
                 <div class="inner">
                     <h2>Presto.it</h2>
                     <p>You made the right choise!</p>
@@ -18,6 +18,9 @@
             </section>
 
         </div>
+        <img src="https://img.freepik.com/foto-gratuito/giovane-bruna-in-maglione-casual-bianco-isolato-sulla-parete-viola_343596-5601.jpg?t=st=1711396249~exp=1711399849~hmac=785648242be6e6ea6ee9354ba43b85523b3728eee8b8d44f0df84e969d87ca21&w=1480"
+ alt="" srcset="" style= object-fit: cover, height="100%",width="100%" >
+
     </div>
     <h1 style="text-align:center">Ecco i nostri annunci</h1>
     <div style="margin-left:30px; margin-right:30px">

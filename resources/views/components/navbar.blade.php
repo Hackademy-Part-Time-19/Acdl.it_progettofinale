@@ -1,10 +1,10 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg ">
     <div class="container-fluid"
-        style="background-image: radial-gradient(circle, #4e1244 0%, #174b57 100%);background-size: 100% auto; ">
-        <a style="font-weight: 1600; padding-left: 30px;color: #DFDFDF; font-size:30px" class="navbar-brand"
+        style="background-image: linear-gradient(to left, #A87C7C 0%, #3F2E3E 100%);background-size: 200% auto; ">
+        <a style="font-weight: 1600; padding-left: 30px;color: #eeeae8; font-size:30px" class="navbar-brand"
             href="{{ route('home') }}">Presto.it</a>
         @auth
-            <p style="font-weight: 1600; padding-left: 30px;color: #DFDFDF; font-size:20px;margin-bottom:0px;">Benvenuto
+            <p style="font-weight: 1600; padding-left: 30px;color: #eeeae8; font-size:20px;margin-bottom:0px;">Benvenuto
                 {{ Auth::user()->name }}</p>
         @endauth
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -17,11 +17,11 @@
             </div>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 linkNavBar">
                 <li class="nav-item">
-                    <a style="color: #DFDFDF; font-size:20px" class="nav-link active" aria-current="page"
+                    <a style="color: #eeeae8; font-size:20px" class="nav-link active" aria-current="page"
                         href=" {{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a style="color: #DFDFDF; font-size:20px"class="nav-link dropdown-toggle" href="#"
+                    <a style="color: #eeeae8; font-size:20px"class="nav-link dropdown-toggle" href="#"
                         id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
                     </a>
@@ -40,18 +40,18 @@
 
                 @auth
                     <li class="nav-item">
-                        <a style="color: #DFDFDF; font-size:20px"class="nav-link" href="{{ route('ads.create') }}">Inserisci
+                        <a style="color: #eeeae8; font-size:20px"class="nav-link" href="{{ route('ads.create') }}">Inserisci
                             un annuncio</a>
                     </li>
 
                 @if (Auth::user()->is_revisor)
                 <li class="nav-item">
-                    <a style="color: #DFDFDF; font-size:20px" class="nav-link btn btn-outline-succes btn-sm position-relative"
+                    <a style="color:#eeeae8; font-size:20px" class="nav-link btn btn-outline-succes btn-sm position-relative"
                     aria-current="page" href="{{route('revisor.index')}}">
                     Area revisore
-                    <span style="color: #DFDFDF; font-size:20px" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    <span style="color: #eeeae8; font-size:20px" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         {{App\Models\Ad::toBeRevisionedCount()}}
-                        <span style="color: #DFDFDF; font-size:20px" class="visually-hidden">unread messages</span>
+                        <span style="color: #eeeae8; font-size:20px" class="visually-hidden">unread messages</span>
                     </span>
                 </a>
 
@@ -60,12 +60,12 @@
                 @endauth
                 @guest
                     <li class="nav-item">
-                        <a style="color: #DFDFDF; font-size:20px" class="nav-link active" aria-current="page"
+                        <a style="color:#eeeae8; font-size:20px" class="nav-link active" aria-current="page"
                             href="/login">Login</a>
                     </li>
 
                     <li class="nav-item">
-                        <a style="color: #DFDFDF; font-size:20px" class="nav-link active" aria-current="page"
+                        <a style="color:#eeeae8; font-size:20px" class="nav-link active" aria-current="page"
                             href="/register">Registrati</a>
                     </li>
                 @endguest
@@ -76,11 +76,11 @@
                             <button
                                 style="
                             align-items: center;
-                            background-color: rgba(240, 240, 240, 0.26);
-                            border: 1px solid hsl(0, 0%, 100%);
+                            background-color: rgba(175, 175, 175, 0.26);
+                            border: 1px solid #eeeae8;
                             border-radius: 16px;
                             box-sizing: border-box;
-                            color: #f5f1f1;
+                            color: #eeeae8;
                             cursor: pointer;
                             display: flex;
                             font-family: Inter, sans-serif;
@@ -103,7 +103,7 @@
                             }
 
                             .button-46:hover {
-                            background-color: #FFFFFF;
+                            background-color:#eeeae8;
                             border-color: rgba(0, 0, 0, 0.19);
                             }
 

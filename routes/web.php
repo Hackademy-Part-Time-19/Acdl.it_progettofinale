@@ -16,6 +16,7 @@ use App\Http\Controllers\RevisorController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Route::get('/', [FrontController::class, 'home'])->name('home');
 
 
