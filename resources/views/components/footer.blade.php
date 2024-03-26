@@ -4,10 +4,13 @@
                 <div class="col-md-4 py-4 py-md-5 aside-stretch d-flex align-items-center">
                     <div class="w-100">
                         <span class="subheading">LAVORA CON NOI</span>
+                        <button class="btn btn-info text-white"> <a href="{{ route('careers') }}">Invia la tua
+                                candidatura</a></button>
                         <h3 class="heading-section">DIVENTA REVISORE</h3>
                     </div>
                 </div>
                 <div class="col-md-8 py-4 py-md-5 d-flex align-items-center pl-md-5 aside-stretch-right">
+
                     <form action="#" class="subscribe-form w-100">
                         <div class="form-group d-flex">
                             <input type="text" class="form-control rounded-left" placeholder="Enter email address">
