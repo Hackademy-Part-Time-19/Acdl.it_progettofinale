@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Artisan;
+use App\Models\User;
 use App\Models\Ad;
 use app\Models\Category;
 use Illuminate\Http\Request;
@@ -39,34 +41,30 @@ class FrontController extends Controller
     public function careersSubmit(Request $request)
     {
         $request->validate([
-            'role' => 'required',
-            'email' => 'required|email',
+
+
             'message' => 'required',
         ]);
 
         $user = Auth::user();
-        $role = $request->role;
+
         $email = $request->email;
         $message = $request->message;
 
-        Mail::to('admin@theaulabpost.it')->send(new CareerRequestMail(compact('role', 'email', 'message')));
+        Mail::to('admin@theaulabpost.it')->send(new CareerRequestMail(compact('message')));
 
 
-        switch ($role) {
-            case 'admin':
-                $user->is_admin = NULL;
-                break;
 
-            case 'revisor':
-                $user->is_revisor = NULL;
-                break;
-
-            case 'writer':
-                $user->is_writer = NULL;
-                break;
-        }
 
         $user->update();
         return redirect(route('home'))->with('message', 'Grazie per averci contattato!');
+    }
+
+    public function makeRevisor1(Request $request)
+    {
+        $user = $request->user();
+
+        Artisan::call('presto:makeUserRevisor', ["email" => $user->email]);
+        return redirect('/')->with('message', 'Complimenti! L\'utente è diventato revisore');
     }
 }
