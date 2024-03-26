@@ -1,5 +1,6 @@
 <?php
 
+use app\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -21,6 +22,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        User::where('email', 'admin@theaulabpost.it')->delete();
         Schema::table('ads', function (Blueprint $table) {
             $table->dropColumn('is_accepted');
         });
