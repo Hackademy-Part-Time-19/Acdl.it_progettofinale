@@ -68,7 +68,5 @@ class FrontController extends Controller
 
         $user->update();
         return redirect(route('home'))->with('message', 'Grazie per averci contattato!');
-
-
     }
 }
