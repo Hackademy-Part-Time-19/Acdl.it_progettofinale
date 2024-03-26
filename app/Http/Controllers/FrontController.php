@@ -67,4 +67,9 @@ class FrontController extends Controller
         Artisan::call('presto:makeUserRevisor', ["email" => $user->email]);
         return redirect('/')->with('message', 'Complimenti! L\'utente è diventato revisore');
     }
+
+    public function searchAds(Request $request){
+        $ads = Ad::search($request->searched)->where('is_accepted', true)->get();
+        return view('categoryShow', compact('ads'));
+    }
 }
