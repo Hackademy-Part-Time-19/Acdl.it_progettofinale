@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg ">
+<nav class="navbar navbar-expand-lg" >
     <div class="container-fluid"
         style="background-image: linear-gradient(to left, #A87C7C 0%, #3F2E3E 100%);background-size: 200% auto; ">
         <a style="font-weight: 1600; padding-left: 30px;color: #eeeae8; font-size:30px" class="navbar-brand"

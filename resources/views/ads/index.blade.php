@@ -17,21 +17,14 @@
         </div>
     @empty
         <div class="col-12">
-            <p class="h1">Non sono presenti annunci per questa ricerca!</p>
-            <p class="h2">Pubblica un tuo annuncio:<a
-                    href="{{ route('ads.create') }}"class="btn btn-success shadow">Nuovo
-                    annuncio</a>
-            </p>
+            <p class="h3">Non sono presenti annunci per questa ricerca!</p>
+            <br>
+            <a href="{{ route('ads.create') }}" class= "btn-ads">Inserisci un nuovo annuncio</a>
+            </br>
         </div>
     @endforelse
 
     </div>
-
-
-
-
-
-
 
 
 </x-layout>

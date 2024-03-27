@@ -1,9 +1,11 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-gradient bg-success shadow mb-4">
-        <div class="row">
-            <div class="col-12 text-light p-5">
+    <div class="boxcategory p-5 mb-4">
 
-                <h1 class="display-2">Esplora la categoria {{ $category->name }}<h1>
+        <div class="row">
+
+            <div class="col-12 p-5">
+
+                <h1 style="color: #1E3A3A">Esplora la categoria {{ $category->name }}<h1>
 
 
 
@@ -34,11 +36,10 @@
                         </div>
                     @empty
                         <div class="col-12">
-                            <p class="h1">Non sono presenti annunci per questa categoria!</p>
-                            <p class="h2">Pubblica un tuo annuncio:<a
-                                    href="{{ route('ads.create') }}"class="btn btn-success shadow">Nuovo
-                                    annuncio</a>
-                            </p>
+                            <p class="h3">Non sono presenti annunci per questa categoria!</p>
+                            <br>
+                            <a href="{{ route('ads.create') }}" class= "btn-ads">Inserisci un nuovo annuncio</a>
+                        </br>
                         </div>
                     @endforelse
 
