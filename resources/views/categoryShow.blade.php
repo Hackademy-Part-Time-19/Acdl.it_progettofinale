@@ -24,7 +24,7 @@
                                     <h5 class="card-title">{{ $ad->title }}</h5>
                                     <p class="card-text">{{ $ad->description }}</p>
                                     <p class="card-text">{{ $ad->price }}</p>
-                                    <a href="{{ route('ads.show', compact('ad')) }}"class="btn btn-primary shadow">Visualizza
+                                    <a href="{{ route('ads.show', compact('ad')) }}"class="btn btn-detail ">Visualizza
                                         dettagli</a>
 
                                     <p class='card-footer my-2'>Pubblicato il {{ $ad->created_at->format('d/m/Y H:i') }}

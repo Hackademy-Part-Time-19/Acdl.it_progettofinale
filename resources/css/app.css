@@ -2,8 +2,17 @@
 
 *{
     font-family: 'Alexandria';font-size: 16px;
-
+    text-decoration: none;
 }
+.a{}
+
+
+
+.container img {
+    height:50%;
+    width: 100%;
+    border-radius: 30px;
+  }
 
 .btn-primary{
     padding: 17px 40px;
@@ -14,20 +23,34 @@
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 14px;
     transition: all 0.5s ease;
+    text-decoration: none
 
 
 
 }
 
 .btn-primary:hover{
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     background-color: #1E3A3A;
     color: hsl(0, 0%, 100%);
     box-shadow: rgba(97, 213, 180, 0.5)0px 7px 29px 0px;
-
-
-
-
 }
+
+
+.btn-detail{
+    padding: 17px 30px;
+  ;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 10px;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: all 0.5s ease;
+    text-decoration: none
+}
+
