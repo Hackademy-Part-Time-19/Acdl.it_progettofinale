@@ -2,11 +2,11 @@
     <div class="container-fluid p-5 bg-gradient bg-success shadow mb-4">
         <div class="row">
             <div class="col-12 text-light p-5">
-                @if ($ads->isEmpty())
-                <h1 class="display-2">Esplora la categoria {{ $ads[0]->category->name }}<h1>
-                    @else
-                    <h1>Non ci sono annunci per la tua ricerca</h1>
-                @endif
+
+                <h1 class="display-2">Esplora la categoria {{ $category->name }}<h1>
+
+
+
             </div>
         </div>
     </div>
