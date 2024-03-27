@@ -5,15 +5,30 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class Ad extends Model
 {
-    use HasFactory;
+    use HasFactory, Searchable;
     protected $fillable = ['title', 'price', 'description', 'image',];
+
+
 
     public function category()
     {
         return $this->belongsTo(category::class);
+    }
+
+    public function toSearchableArray()
+    {
+        $category = $this->category;
+        $array = [
+            'id' => $this->id,
+            'title' => $this->title,
+            'description' => $this->description,
+            'category' => $category->name,
+        ];
+        return $array;
     }
 
     public function user()
@@ -32,4 +47,5 @@ class Ad extends Model
     {
         return Ad::where('is_accepted', null)->count();
     }
+
 }

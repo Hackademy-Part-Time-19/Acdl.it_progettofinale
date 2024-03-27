@@ -22,7 +22,7 @@
                     @enderror
                     <br>
                     <p>Non sei registrato?<a href="{{ route('register') }}"><br>Clicca qui</a></p>
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn-primary">Login</button>
                 </form>
             </div>
         </div>
