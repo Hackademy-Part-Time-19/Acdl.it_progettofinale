@@ -1543,7 +1543,7 @@
             },
             "time": "2023-12-19T18:44:48+00:00"
         },
-        {
+                {
             "name": "laravel/serializable-closure",
             "version": "v1.3.3",
             "source": {
@@ -2831,7 +2831,7 @@
             },
             "time": "2022-06-13T21:57:56+00:00"
         },
-        {
+                {
             "name": "psr/clock",
             "version": "1.0.0",
             "source": {
@@ -5777,7 +5777,7 @@
             ],
             "time": "2024-02-15T11:23:52+00:00"
         },
-        {
+                {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "v2.2.7",
             "source": {
