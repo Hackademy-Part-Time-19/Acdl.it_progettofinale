@@ -17,7 +17,7 @@ class RevisorController extends Controller
     public function index()
     {
         $ad_to_check = Ad::where('is_accepted', null)->first();
-        return view('revisor.index', compact('ad_to_check'));
+        return view('revisor.index', compact('ad_to_check'),);
     }
 
     public function acceptAd(Ad $ad)

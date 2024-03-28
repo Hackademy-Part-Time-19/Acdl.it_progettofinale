@@ -12,7 +12,7 @@
     @livewireStyles
 </head>
 
-<body style="background-color: #eeeae8">
+<body style="background-color: #eeeae8; hight:100%">
     <x-navbar />
     {{ $slot }}
     @livewireScripts

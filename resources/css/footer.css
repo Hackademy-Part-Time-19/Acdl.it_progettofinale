@@ -5,9 +5,10 @@
 
 
 .footer-06 {
-    padding-top: 0 !important;
+    padding-bottom: 0 !important;
     background: #3F2E3E ;
-    position:relative;
+    position: relative;
+    bottom: 0;
     overflow: hidden;
     z-index: 0;
     
@@ -24,3 +25,9 @@
     text-transform: uppercase;
 }
 
+.footer-06 .footer-heading {
+    font-size: 20px;
+    color:  #eeeae8;
+    margin-bottom: 20px;
+
+}
