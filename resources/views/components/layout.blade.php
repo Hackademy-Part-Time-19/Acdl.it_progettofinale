@@ -14,8 +14,6 @@
 
 <body style="background-color: #eeeae8">
     <x-navbar />
-
-
     {{ $slot }}
     @livewireScripts
     <x-footer />

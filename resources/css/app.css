@@ -1,5 +1,8 @@
 @import'bootstrap';
 
+body{
+    height: 100vh;
+}
 *{
     font-family: 'Alexandria'; font-size: 14px;
     text-decoration:none;

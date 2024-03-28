@@ -9,18 +9,7 @@
             {{ session('message') }}
         </div>
     @endif
-    <!--<div class="is-preload">-->
 
-    <!-- Page Wrapper
-        <div id="page-wrapper"> -->
-
-    <!-- Banner
-            <section id="banner" style="margin: 40px">
-                <div class="inner">
-                    <h2>Presto.it</h2>
-                    <p>You made the right choise!</p>
-                </div>
-            </section> -->
 
     <div class="box img " style="position:relative;">
         <div style="position: absolute; top: 150px; left: 30px;z-index: 500;width:30%;">
@@ -60,7 +49,4 @@
             @endforeach
         </div>
     </div>
-
-
-
 </x-layout>
