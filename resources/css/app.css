@@ -7,7 +7,7 @@
 
 }
 
-.boxcategory {
+.box-category {
 
 border-radius:40px;
 margin-left: 20px;
@@ -16,6 +16,8 @@ border: 7px solid #3F2E3E;
 height: 150px;
 align-items:center ;
 display: flex;
+margin-top: 65px;
+
 }
 
 .box img {
@@ -24,6 +26,7 @@ width: 100vw;
 padding-left: 10px;
 padding-right: 10px;
 margin-bottom: 20px;
+margin-top: 65px;
 
   }
 

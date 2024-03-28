@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg" >
+<nav class="navbar navbar-expand-lg" style="padding:0px 0px 0px 0px; position:fixed;top:0;width:100%;z-index:600;">
     <div class="container-fluid"
         style="background-image: linear-gradient(to left, #A87C7C 0%, #3F2E3E 100%);background-size: 200% auto; ">
         <a style="font-weight: 1600; padding-left: 30px;color: #eeeae8; font-size:30px" class="navbar-brand"
@@ -44,19 +44,22 @@
                             un annuncio</a>
                     </li>
 
-                @if (Auth::user()->is_revisor)
-                <li class="nav-item">
-                    <a style="color:#eeeae8; font-size:20px" class="nav-link btn btn-outline-succes btn-sm position-relative"
-                    aria-current="page" href="{{route('revisor.index')}}">
-                    Area revisore
-                    <span style="color: #eeeae8; font-size:20px" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        {{App\Models\Ad::toBeRevisionedCount()}}
-                        <span style="color: #eeeae8; font-size:20px" class="visually-hidden">unread messages</span>
-                    </span>
-                </a>
+                    @if (Auth::user()->is_revisor)
+                        <li class="nav-item">
+                            <a style="color:#eeeae8; font-size:20px"
+                                class="nav-link btn btn-outline-succes btn-sm position-relative" aria-current="page"
+                                href="{{ route('revisor.index') }}">
+                                Area revisore
+                                <span style="color: #eeeae8; font-size:20px"
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    {{ App\Models\Ad::toBeRevisionedCount() }}
+                                    <span style="color: #eeeae8; font-size:20px" class="visually-hidden">unread
+                                        messages</span>
+                                </span>
+                            </a>
 
-                </li>
-                @endif
+                        </li>
+                    @endif
                 @endauth
                 @guest
                     <li class="nav-item">
@@ -119,9 +122,10 @@
                     </li>
                 @endauth
             </ul>
-            <form action="{{route('ads.search')}}" method="GET" class="d-flex">
+            <form action="{{ route('ads.search') }}" method="GET" class="d-flex">
                 @csrf
-                <input type="search" name="searched" class="form-control me-2" placeholder="search" aria-label="search">
+                <input type="search" name="searched" class="form-control me-2" placeholder="search"
+                    aria-label="search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>

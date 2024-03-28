@@ -1,6 +1,6 @@
 <x-layout>
     @forelse ($ads as $ad)
-        <div class="col-12 col-md-4 my-2">
+        <div class="col-12 col-md-4 my-2"style="margin-top:65px;">
             <div class="card shadow" style="width: 18rem;">
                 <img src="..." class="card-img-top p-3 rounded" alt="...">
                 <div style="overflow: hidden; text-overflow: ellipsis" class="card-body">
@@ -16,7 +16,7 @@
             </div>
         </div>
     @empty
-        <div class="col-12">
+        <div class="col-12" style="margin-top:65px;">
             <p class="h3">Non sono presenti annunci per questa ricerca!</p>
             <br>
             <a href="{{ route('ads.create') }}" class= "btn-ads">Inserisci un nuovo annuncio</a>
