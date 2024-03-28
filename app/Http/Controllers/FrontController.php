@@ -15,7 +15,7 @@ class FrontController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except('home');
+        $this->middleware('auth')->except('home', 'categoryShow', 'searchAds');
     }
 
     public function home()
@@ -68,8 +68,9 @@ class FrontController extends Controller
         return redirect('/')->with('message', 'Complimenti! L\'utente è diventato revisore');
     }
 
-    public function searchAds(Request $request){
+    public function searchAds(Request $request)
+    {
         $ads = Ad::search($request->searched)->where('is_accepted', true)->get();
-        return view('categoryShow', compact('ads'));
+        return view('ads.index', compact('ads'));
     }
 }

@@ -49,3 +49,4 @@ Route::post('/careers/submit', [FrontController::class, 'careersSubmit'])->name(
 Route::get('/rendi/revisore1/{user}', [FrontController::class, 'makeRevisor1'])->name('make.revisor1');
 
 Route::get('/ricerca/annuncio', [FrontController::class, 'searchAds'])->name('ads.search');
+

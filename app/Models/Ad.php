@@ -47,5 +47,4 @@ class Ad extends Model
     {
         return Ad::where('is_accepted', null)->count();
     }
-
 }
