@@ -1,6 +1,6 @@
 <x-layout>
-    <div class="container">
-        <div class="row">
+    <div class="container" style="margin-top: 50px">
+        <div class="row" style="margin-top: 50px">
             <div class="col-lg-4 mx-auto">
                 <form class="mt-5" action="/login" method="POST">
                     @csrf
