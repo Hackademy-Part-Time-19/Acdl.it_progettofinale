@@ -13,9 +13,13 @@
 </head>
 
 <body style="background-color: #eeeae8; hight:100%">
-    <x-navbar />
-    {{ $slot }}
-    @livewireScripts
+    <div id="contenitore">
+
+        <x-navbar />
+        {{ $slot }}
+        @livewireScripts
+
+    </div>
     <x-footer />
 </body>
 

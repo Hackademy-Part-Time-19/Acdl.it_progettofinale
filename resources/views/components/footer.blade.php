@@ -1,4 +1,4 @@
-    <footer class="footer-06" style="margin-top: 3rem">
+    <footer id="footer"class="footer-06">
         <div class="container">
             <div class="row align-items-center align-items-stretch mb-5" style="margin-top: 3rem">
                 <div>

@@ -13,7 +13,7 @@
 
 
                     @forelse ($ads as $ad)
-                        <div class="col-12 col-md-4 my-2">
+                        <div class="col-12 col-md-3 my-2">
                             <div class="card shadow" style="width: 18rem;">
                                 <img src="..." class="card-img-top p-3 rounded" alt="...">
                                 <div style="overflow: hidden; text-overflow: ellipsis" class="card-body">

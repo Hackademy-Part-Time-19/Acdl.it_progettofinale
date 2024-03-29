@@ -1,4 +1,4 @@
-<div>
+<div style="margin-top:100px;">
     <h1>Inserisci un annuncio</h1>
     <div class="container">
         <div class="row">
@@ -60,7 +60,7 @@
 
 
                     </div>
-                   
+
                     @if (session()->has('message'))
                         <div class="alert alert-success">
                             {{ session('message') }}
