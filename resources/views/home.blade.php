@@ -21,7 +21,6 @@
                     <p>You made the right choise!</p>
                 </div>
             </section> -->
-
     <div class="box img " style="position:relative;">
         <div style="position: absolute; top: 150px; left: 30px;z-index: 500;width:30%;">
             <h2 style="font-weight:900;color:white;">Benvenuto su Presto.it,

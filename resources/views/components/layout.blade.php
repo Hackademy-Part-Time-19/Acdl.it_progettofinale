@@ -12,12 +12,16 @@
     @livewireStyles
 </head>
 
-<body style="background-color: #eeeae8; hight:100%">
+<body style="background-color: #eeeae8; ">
     <x-navbar />
 
+    <div>
+        {{ $slot }}
+        @livewireScripts
 
-    {{ $slot }}
-    @livewireScripts
+    </div>
+
+
     <x-footer />
 </body>
 
