@@ -12,16 +12,14 @@
     @livewireStyles
 </head>
 
-<body style="background-color: #eeeae8; ">
-    <x-navbar />
+<body style="background-color: #eeeae8; hight:100%">
+    <div id="contenitore">
 
-    <div>
+        <x-navbar />
         {{ $slot }}
         @livewireScripts
 
     </div>
-
-
     <x-footer />
 </body>
 

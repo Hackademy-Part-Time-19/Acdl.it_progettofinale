@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container" style="margin-top: 50px">
+    <div class="container" style="margin-top: 50px;">
         <div class="row" style="margin-top: 50px">
             <div class="col-lg-4 mx-auto" style="margin-bottom: 0%">
                 <form class="mt-5" action="/register" method="POST">
