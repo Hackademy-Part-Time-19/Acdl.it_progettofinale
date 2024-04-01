@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg" style="padding:0px 0px 0px 0px; position:fixed;top:0;width:100%;z-index:600;">
     <div class="container-fluid"
-        style="background-image: linear-gradient(to left, #A87C7C 0%, #3F2E3E 100%);background-size: 200% auto; ">
+        style="background-image: linear-gradient(to left, #A87C7C 0%, #3F2E3E 100%);background-size: 200% auto; height:80px">
         <a style="font-weight: 1600; padding-left: 30px;color: #eeeae8; font-size:30px" class="navbar-brand"
             href="{{ route('home') }}">Presto.it</a>
         @auth
@@ -131,3 +131,6 @@
         </div>
     </div>
 </nav>
+<div style="height: 50px">
+
+</div>

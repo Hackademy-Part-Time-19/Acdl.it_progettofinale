@@ -22,10 +22,6 @@ body{
 
 
 
-
-
-
-
 *{
     font-family: 'Alexandria'; font-size: 14px;
     text-decoration:none;
@@ -38,8 +34,9 @@ body{
 border-radius:40px;
 margin-left: 20px;
 margin-right: 20px;
-border: 7px solid #3F2E3E;
+border: 3px solid #3F2E3E;
 height: 150px;
+justify-content: center;
 align-items:center ;
 display: flex;
 margin-top: 65px;
@@ -53,6 +50,9 @@ padding-left: 10px;
 padding-right: 10px;
 margin-bottom: 20px;
 margin-top: 65px;
+justify-content: center;
+align-items:center ;
+
 
   }
 
@@ -106,8 +106,7 @@ margin-top: 65px;
 
 
 .btn-detail{
-    padding: 17px 30px;
-  ;
+    padding: 17px 25px;
     border-radius: 50px;
     cursor: pointer;
     border: 10px;
@@ -117,7 +116,8 @@ margin-top: 65px;
     text-transform: uppercase;
     font-size: 12px;
     transition: all 0.5s ease;
-    text-decoration: none
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-ads{
@@ -142,4 +142,45 @@ color: #3F2E3E;
     background-color: #1E3A3A;
     color: hsl(0, 0%, 100%);
     box-shadow: rgba(97, 213, 180, 0.5)0px 7px 29px 0px;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 50%;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel img:nth-child(1) {
+    transform: translateX(0);
+}
+
+.carousel img:nth-child(2) {
+    transform: translateX(-100%);
+}
+
+.carousel img:nth-child(3) {
+    transform: translateX(-200%);
+}
+
+.transitions {
+    animation: slide 5s infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    33.3% {
+        transform: translateX(-100%);
+    }
+    66.6% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
