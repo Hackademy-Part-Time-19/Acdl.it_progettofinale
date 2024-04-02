@@ -20,14 +20,14 @@ class FrontController extends Controller
 
     public function home()
     {
-        $ads = Ad::orderBy('created_at', 'desc')->where('is_accepted', true)->take(10)->get();
+        $ads = Ad::orderBy('created_at', 'desc')->where('is_accepted', true)->take(9)->get();
         return view('home', compact('ads'));
     }
 
     public function categoryShow(Category $category)
     {
         $ads = Ad::where('category_id', $category->id)
-            ->orderBy('created_at', 'desc')->where('is_accepted', true)->take(10)
+            ->orderBy('created_at', 'desc')->where('is_accepted', true)->take(9)
             ->get();
 
         return view('categoryShow', compact('category', 'ads'));
@@ -42,7 +42,6 @@ class FrontController extends Controller
     {
         $request->validate([
 
-
             'message' => 'required',
         ]);
 
@@ -52,9 +51,6 @@ class FrontController extends Controller
         $message = $request->message;
 
         Mail::to('admin@theaulabpost.it')->send(new CareerRequestMail(compact('message')));
-
-
-
 
         $user->update();
         return redirect(route('home'))->with('message', 'Grazie per averci contattato!');
