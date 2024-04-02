@@ -7,6 +7,10 @@
 
 }
 
+.p-footer{
+    color: #e8e3e1;
+}
+
 .box-category {
 
 border-radius:40px;
@@ -117,3 +121,4 @@ color: #3F2E3E;
     color: hsl(0, 0%, 100%);
     box-shadow: rgba(97, 213, 180, 0.5)0px 7px 29px 0px;
 }
+
