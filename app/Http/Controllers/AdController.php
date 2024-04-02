@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+use Illuminate\View\View;
+
 use App\Models\Ad;
 use Illuminate\Http\Request;
 
@@ -10,10 +14,11 @@ class AdController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): View
     {
-        $ads = Ad::all();
-        return view('ads.index', compact('ads'));
+        return view('ads.index', [
+            'ads' => DB::table('ads')->paginate(9)
+        ]);
     }
 
     /**

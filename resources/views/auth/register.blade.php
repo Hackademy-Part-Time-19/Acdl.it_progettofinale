@@ -1,7 +1,7 @@
 <x-layout>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 mx-auto">
+    <div class="container" style="margin-top: 50px;">
+        <div class="row" style="margin-top: 50px">
+            <div class="col-lg-4 mx-auto" style="margin-bottom: 0%">
                 <form class="mt-5" action="/register" method="POST">
                     @csrf
                     <h1>Registrati</h1>

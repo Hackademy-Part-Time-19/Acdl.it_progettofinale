@@ -12,6 +12,6 @@
     },
     "dependencies": {
         "bootstrap": "^5.3.3",
-        "botstrap": "^0.20.1"
+        "botstrap": "^0.15.4"
     }
 }
