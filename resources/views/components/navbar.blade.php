@@ -3,6 +3,13 @@
         style="background-image: linear-gradient(to left, #A87C7C 0%, #3F2E3E 100%);background-size: 200% auto; height:80px">
         <a style="font-weight: 1600; padding-left: 30px;color: #eeeae8; font-size:30px" class="navbar-brand"
             href="{{ route('home') }}">Presto.it</a>
+            <x-flag-country-nazionalità />
+            <x-flag-country-it />
+            <x-flag-country-nazionalità />
+            <x-flag-country-en />
+            <x-flag-country-nazionalità />
+            <x-flag-country-es />
+        
         @auth
             <p style="font-weight: 1600; padding-left: 30px;color: #eeeae8; font-size:20px;margin-bottom:0px;">Benvenuto
                 {{ Auth::user()->name }}</p>
@@ -16,6 +23,7 @@
 
             </div>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 linkNavBar">
+
                 <li class="nav-item">
                     <a style="color: #eeeae8; font-size:20px" class="nav-link active" aria-current="page"
                         href=" {{ route('home') }}">Home</a>
@@ -131,6 +139,6 @@
         </div>
     </div>
 </nav>
-<div style="height: 50px">
+<div style="height: 30px">
 
 </div>
