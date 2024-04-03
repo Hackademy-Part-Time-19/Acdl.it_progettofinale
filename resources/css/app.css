@@ -1,11 +1,12 @@
 @import'bootstrap';
-
+@import 'node_modules/flag-icon-css/css/flag-icons.min.css';
 
 
 html{
     height: 100%;
     width: 100%;
 }
+
 body{
     min-width: 100%;
     min-height: 100%;
