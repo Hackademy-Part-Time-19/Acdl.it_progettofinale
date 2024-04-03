@@ -13,7 +13,8 @@
     },
     "dependencies": {
         "bootstrap": "^5.3.3",
-        "botstrap": "^0.15.4",
-        "flag-icon-css": "^4.1.7"
+        "botstrap": "^0.20.1",
+        "flag-icon-css": "^4.1.7",
+        "flag-icons": "^7.2.1"
     }
 }

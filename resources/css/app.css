@@ -1,7 +1,10 @@
 @import'bootstrap';
-@import 'node_modules/flag-icon-css/css/flag-icons.min.css';
 
-
+.bandiera{
+height: 20px;
+display: flex;
+margin: 3px;
+}
 html{
     height: 100%;
     width: 100%;

@@ -50,3 +50,4 @@ Route::get('/rendi/revisore1/{user}', [FrontController::class, 'makeRevisor1'])-
 
 Route::get('/ricerca/annuncio', [FrontController::class, 'searchAds'])->name('ads.search');
 
+Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('set_language_locale');
