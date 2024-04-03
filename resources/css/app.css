@@ -1,12 +1,15 @@
 @import'bootstrap';
 
-
-
-
+.bandiera{
+height: 20px;
+display: flex;
+margin: 3px;
+}
 html{
     height: 100%;
     width: 100%;
 }
+
 body{
     min-width: 100%;
     min-height: 100%;
@@ -14,7 +17,7 @@ body{
     flex-direction: column;
     margin: 0;
     padding: 0;
-   
+
 }
 
 .container{
@@ -28,6 +31,10 @@ body{
     text-decoration:none;
     color: rgb(62, 62, 62);
 
+}
+
+.p-footer{
+    color: #e8e3e1;
 }
 
 .box-category {

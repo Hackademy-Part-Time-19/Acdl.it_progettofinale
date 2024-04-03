@@ -1,15 +1,19 @@
 <nav class="navbar navbar-expand-lg" style="padding:0px 0px 0px 0px; position:fixed;top:0;width:100%;z-index:600;">
-    <div class="container-fluid"
+    <div class="container-fluid p-1"
         style="background-image: linear-gradient(to left, #A87C7C 0%, #3F2E3E 100%);background-size: 200% auto; height:80px">
-        <a style="font-weight: 1600; padding-left: 30px;color: #eeeae8; font-size:30px" class="navbar-brand"
-            href="{{ route('home') }}">Presto.it</a>
-            <x-flag-country-nazionalità />
-            <x-flag-country-it />
-            <x-flag-country-nazionalità />
-            <x-flag-country-en />
-            <x-flag-country-nazionalità />
-            <x-flag-country-es />
-        
+
+        <div class="col-4">
+            <a href="{{ route('home') }}"> <img style="width: 50%;heigth:50%" src="{{ asset('storage/LogoPresto.png') }}"
+                    alt="" srcset=""></a>
+        </div>
+        {{--   <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation" style="color: white;">
+            <span class="navbar-toggler-icon"></span>
+        </button> --}}
+
+        {{-- <a href="{{ route('home') }}"> <img class="w-8" src="{{asset('storage/LogoPresto.png')}}" alt="" srcset=""></a> --}}
+
         @auth
             <p style="font-weight: 1600; padding-left: 30px;color: #eeeae8; font-size:20px;margin-bottom:0px;">Benvenuto
                 {{ Auth::user()->name }}</p>
@@ -78,6 +82,7 @@
                     <li class="nav-item">
                         <a style="color:#eeeae8; font-size:20px" class="nav-link active" aria-current="page"
                             href="/register">Registrati</a>
+
                     </li>
                 @endguest
                 @auth
@@ -136,6 +141,18 @@
                     aria-label="search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
+
+            <div class="bandiera">
+                <x-flag-language-en />
+            </div>
+            <div class="bandiera">
+                <x-flag-language-it />
+            </div>
+            <div class="bandiera">
+                <x-flag-language-es />
+            </div>
+
+
         </div>
     </div>
 </nav>

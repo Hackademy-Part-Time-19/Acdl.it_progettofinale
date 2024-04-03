@@ -12,7 +12,7 @@
     @livewireStyles
 </head>
 
-<body style="background-color: #eeeae8; hight:100%">
+<body style="background-image:src="{{ asset('storage/LogoPresto.png') }}; hight:100%">
     <div id="contenitore">
 
         <x-navbar />
