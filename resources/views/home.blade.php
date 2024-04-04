@@ -24,7 +24,6 @@
     </div>
 
 
-
     <h1 style="text-align:center">Ecco i nostri annunci</h1>
     <div>
         <div class="row justify-content-md-center">

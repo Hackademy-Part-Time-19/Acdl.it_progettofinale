@@ -1,6 +1,7 @@
 import "./bootstrap";
 import "bootstrap";
 
+
 window.onload = positionFooter; // Chiamata alla funzione al caricamento della pagina
 window.addEventListener("resize", positionFooter); // Aggiorna la posizione del footer al ridimensionamento della finestra
 
