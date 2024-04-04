@@ -1,0 +1,2 @@
+<?php
+return ['Categorie' => 'Categorías'];

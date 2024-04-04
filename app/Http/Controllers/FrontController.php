@@ -69,4 +69,11 @@ class FrontController extends Controller
         $ads = Ad::search($request->searched)->where('is_accepted', true)->get();
         return view('ads.index', compact('ads'));
     }
+
+    public function setLinguaggio($lang)
+    {
+
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
 }

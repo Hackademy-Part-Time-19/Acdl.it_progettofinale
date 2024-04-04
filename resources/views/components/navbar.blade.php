@@ -15,6 +15,23 @@
             <div style="display: flex;flex:1">
 
             </div>
+            <li class="nav-item">
+                <a href="{{ route('home') }}">
+                    <x-flag-language-it /></a>
+
+
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('home') }}">
+                    <x-flag-language-en /></a>
+
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('home') }}">
+                    <x-flag-language-es /></a>
+
+
+            </li>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 linkNavBar">
                 <li class="nav-item">
                     <a style="color: #eeeae8; font-size:20px" class="nav-link active" aria-current="page"
@@ -23,7 +40,7 @@
                 <li class="nav-item dropdown">
                     <a style="color: #eeeae8; font-size:20px"class="nav-link dropdown-toggle" href="#"
                         id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie
+                        {{ __('messages.Categorie') }}
                     </a>
 
                     <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
@@ -37,6 +54,7 @@
                         @endforeach
                     </ul>
                 </li>
+
 
                 @auth
                     <li class="nav-item">
