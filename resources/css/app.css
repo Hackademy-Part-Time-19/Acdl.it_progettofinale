@@ -2,8 +2,10 @@
 
 .bandiera{
 height: 20px;
+width: 46px;
 display: flex;
 margin: 3px;
+
 }
 html{
   height: 100%;
