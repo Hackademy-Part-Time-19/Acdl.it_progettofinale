@@ -142,15 +142,11 @@
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
 
-            <div class="bandiera">
-                <x-flag-language-en />
-            </div>
-            <div class="bandiera">
-                <x-flag-language-it />
-            </div>
-            <div class="bandiera">
-                <x-flag-language-es />
-            </div>
+            <a class="bandiera" href="{{ route('set_language_locale', 'en') }}"><x-flag-language-en />en</a>
+
+            <a class="bandiera" href="{{ route('set_language_locale', 'it') }}"><x-flag-language-it />it</a>
+
+            <a class="bandiera" href="{{ route('set_language_locale', 'es') }}"><x-flag-language-es />es</a>
 
 
         </div>
