@@ -18,6 +18,7 @@ class FrontController extends Controller
         $this->middleware('auth')->except('home', 'categoryShow', 'searchAds');
     }
 
+    
     public function home()
     {
         $ads = Ad::orderBy('created_at', 'desc')->where('is_accepted', true)->take(9)->get();

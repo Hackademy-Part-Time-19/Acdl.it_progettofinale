@@ -15,7 +15,7 @@
 <body style="background-color: #eeeae8; hight:100%">
     <div id="contenitore">
 
-        <x-navbar />
+        <x-navbar/>
         {{ $slot }}
         @livewireScripts
 
