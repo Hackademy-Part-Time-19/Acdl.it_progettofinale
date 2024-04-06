@@ -46,7 +46,8 @@
                             id="category">
                             <option value="">{{ __('messages.SelezionaCategoria') }}</option>
                             @foreach ($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }} </option>
+                                <option value="{{ $category->id }}">{{ __('messages.categoria_' . $category->id) }}
+                                </option>
                             @endforeach
                         </select>
                         @error('category')

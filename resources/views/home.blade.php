@@ -44,8 +44,8 @@
                                 class="btn-detail">{{ __('messages.Dettagli') }}<a>
                                     <a href="{{ route('categoryShow', ['category' => $ad->category]) }}"
                                         class="btn-detail">
-                                        {{ $ad->category->name }}</a>
-                                    <p style="margin-top: 20px" class='card-footer'>Pubblicato il
+                                        {{ __('messages.categoria_' . $ad->id) }} </a>
+                                    <p style="margin-top: 20px" class='card-footer'>{{ __('messages.Pubblicato') }}:
                                         {{ $ad->created_at->format('d/m/Y H:i') }}</p>
                         </div>
                     </div>

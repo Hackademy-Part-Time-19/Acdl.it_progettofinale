@@ -1,16 +1,16 @@
 <x-layout>
     <div class="container-fluid p-5 shadow mb-2" style="margin-bottom: 0">
-        
-            <div class="row">
-                <h1 class="display-5" style="color:#1E3A3A; text-align:center"> {{ $ad->title }}</h1>
-            </div>
-        
+
+        <div class="row">
+            <h1 class="display-5" style="color:#1E3A3A; text-align:center"> {{ $ad->title }}</h1>
+        </div>
+
     </div>
     <div class="container">
-        <div class="row" >
+        <div class="row">
             <div class="col-10">
-                <div id="showCarousel" class="carousel slide" data-bs-ride="carousel" >
-                    <div class="carousel-inner" >
+                <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
                         <div class="carousel-item active ">
                             <img src="{{ $ad->images}}"
                                 class="img-fluid p-3 rounded" alt="...">
@@ -41,8 +41,8 @@
 
                 <a href="{{ route('categoryShow', ['category' => $ad->category]) }}"
                     class="my-2 border-top pt-2 border-dark card-link shadow btn btn-start">
-                    Categoria:
-                    {{ $ad->category->name }}</a>
+                    {{ __('messages.Categoria') }}:
+                    {{ __('messages.categoria_' . $ad->id) }}</a>
                 <p class='card-footer'>Pubblicato il {{ $ad->created_at->format('d/m/Y') }}
             </div>
         </div>

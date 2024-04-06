@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use App\Models\Category;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,6 +18,11 @@ return new class extends Migration
             $table->string('name');
             $table->timestamps();
         });
+
+
+
+
+
         $categories = ['Motori', 'Informatica', 'Elettrodomestici e domotica', 'Libri', 'Giochi', 'Musica', 'Sport', 'Immobili', 'Arredamento', 'Telefonia'];
         foreach ($categories as $category) {
             Category::create(['name' => $category]);

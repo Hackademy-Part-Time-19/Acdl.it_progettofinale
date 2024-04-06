@@ -84,7 +84,7 @@ public function updatedTemporaryImages(){
         Auth::user()->ads()->save($ad); */
      
 
-        session()->flash('message', "L'annuncio è stato inserito con successo");
+        session()->flash('message', __('messages.AnnuncioSuccesso'));
         $this->cleanForm();
 
     }

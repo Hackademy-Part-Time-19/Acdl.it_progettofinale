@@ -4,9 +4,9 @@
             <div class="col-lg-4 mx-auto" style="margin-bottom: 0%">
                 <form class="mt-5" action="/register" method="POST">
                     @csrf
-                    <h1>Registrati</h1>
+                    <h1> {{ __('messages.RegistrazioneForm') }}</h1>
                     <div class="mb-3">
-                        <label for="name" class="form-label">Nome</label>
+                        <label for="name" class="form-label"> {{ __('messages.NomeUtente') }}</label>
                         <input name="name" type="text" class="form-control" id="name">
                     </div>
                     @error('name')
@@ -29,14 +29,16 @@
                     @enderror
 
                     <div class="mb-3">
-                        <label for="password_confirmation" class="form-label">Conferma password</label>
+                        <label for="password_confirmation" class="form-label"> {{ __('messages.ConfermaPassword') }}
+                            password</label>
                         <input name="password_confirmation" type="password" class="form-control"
                             id="password_confirmation">
                     </div>
                     <br>
-                    <p>Già registrato?<a href="{{ route('login') }}"><br>Clicca qui</a></p>
+                    <p> {{ __('messages.GiàRegistrato?') }}<a
+                            href="{{ route('login') }}"><br>{{ __('messages.CliccaQui') }}</a></p>
 
-                    <button type="submit" class="btn-primary">Register</button>
+                    <button type="submit" class="btn-primary">{{ __('messages.Registrazione') }}</button>
                 </form>
             </div>
         </div>
