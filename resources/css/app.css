@@ -2,12 +2,14 @@
 
 .bandiera{
 height: 20px;
+width: 46px;
 display: flex;
 margin: 3px;
+
 }
 html{
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 body{
@@ -21,15 +23,15 @@ body{
 }
 
 .container{
-    margin-left: 0px;
+  margin-left: 0px;
 }
 
 
 
 *{
-    font-family: 'Alexandria'; font-size: 14px;
-    text-decoration:none;
-    color: rgb(62, 62, 62);
+  font-family: 'Alexandria'; font-size: 14px;
+  text-decoration:none;
+  color: rgb(62, 62, 62);
 
 }
 
@@ -62,54 +64,54 @@ justify-content: center;
 align-items:center ;
 
 
-  }
+}
 
 .btn-primary{
-    padding: 17px 40px;
-    border-radius: 50px;
-    cursor: pointer;
-    border: 10px;
-    background-color: white;
-    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-size: 14px;
-    transition: all 0.5s ease;
-    text-decoration: none
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 10px;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: all 0.5s ease;
+  text-decoration: none
 
 
 
 }
 
 .btn-primary:hover{
-    letter-spacing: 2px;
-    background-color: #1E3A3A;
-    color: hsl(0, 0%, 100%);
-    box-shadow: rgba(97, 213, 180, 0.5)0px 7px 29px 0px;
+  letter-spacing: 2px;
+  background-color: #1E3A3A;
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgba(97, 213, 180, 0.5)0px 7px 29px 0px;
 }
 
 .btn-start{
-    padding: 17px 40px;
-    border-radius: 50px;
-    cursor: pointer;
-    border: 10px;
-    background-color: white;
-    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-size: 14px;
-    transition: all 0.5s ease;
-    text-decoration: none
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 10px;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: all 0.5s ease;
+  text-decoration: none
 
 
 
 }
 
 .btn-start:hover{
-    letter-spacing: 2px;
-    background-color: #3F2E3E;
-    color: hsl(0, 0%, 100%);
-    box-shadow: rgba(63, 46, 62, 0.5)0px 7px 29px 0px;
+  letter-spacing: 2px;
+  background-color: #3F2E3E;
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgba(63, 46, 62, 0.5)0px 7px 29px 0px;
 }
 
 
@@ -129,27 +131,27 @@ align-items:center ;
 }
 
 .btn-ads{
-    padding: 10px 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    border: 10px;
-    background-color: white;
-    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-size: 14px;
-    transition: all 0.5s ease;
-    text-decoration:none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 10px;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: all 0.5s ease;
+  text-decoration:none;
 color: #3F2E3E;
 
 
 }
 
 .btn-ads:hover{
-    letter-spacing: 2px;
-    background-color: #1E3A3A;
-    color: hsl(0, 0%, 100%);
-    box-shadow: rgba(97, 213, 180, 0.5)0px 7px 29px 0px;
+  letter-spacing: 2px;
+  background-color: #1E3A3A;
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgba(97, 213, 180, 0.5)0px 7px 29px 0px;
 }
 
 .carousel {

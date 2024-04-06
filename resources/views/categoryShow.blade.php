@@ -2,7 +2,7 @@
     <div class="box-category p-5 mb-4">
         <div class="row">
             <div class="col-12 p-5">
-                <h1 style="color: #1E3A3A">Esplora la categoria {{ $category->name }}<h1>
+                <h1 style="color: #1E3A3A">{{ __('messages.EsploraCategoria') }} {{ $category->name }}<h1>
             </div>
         </div>
     </div>
@@ -21,8 +21,8 @@
                                     <h5 class="card-title">{{ $ad->title }}</h5>
                                     <p class="card-text">{{ $ad->description }}</p>
                                     <p class="card-text">{{ $ad->price }}</p>
-                                    <a href="{{ route('ads.show', compact('ad')) }}"class="btn btn-detail ">Visualizza
-                                        dettagli</a>
+                                    <a href="{{ route('ads.show', compact('ad')) }}"class="btn btn-detail ">{{ __('messages.VisualizzaDettagli') }}
+                                    </a>
 
                                     <p class='card-footer my-2'>Pubblicato il {{ $ad->created_at->format('d/m/Y H:i') }}
 

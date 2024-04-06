@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\App;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdController;
 
@@ -50,4 +52,4 @@ Route::get('/rendi/revisore1/{user}', [FrontController::class, 'makeRevisor1'])-
 
 Route::get('/ricerca/annuncio', [FrontController::class, 'searchAds'])->name('ads.search');
 
-Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('set_language_locale');
+Route::get('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('set_language_locale');

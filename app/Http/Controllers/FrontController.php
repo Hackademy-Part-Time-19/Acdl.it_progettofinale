@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Artisan;
 use App\Models\User;
 use App\Models\Ad;
@@ -15,7 +16,7 @@ class FrontController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except('home', 'categoryShow', 'searchAds');
+        $this->middleware('auth')->except('home', 'categoryShow', 'searchAds', 'setLanguage');
     }
 
     
@@ -70,10 +71,11 @@ class FrontController extends Controller
         $ads = Ad::search($request->searched)->where('is_accepted', true)->get();
         return view('ads.index', compact('ads'));
     }
-public function setLanguage($lang)
-{
-session ()->put ('_locale',$lang);
-return redirect()->back();
-}
 
+    public function setLanguage($lang)
+    {
+
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
 }

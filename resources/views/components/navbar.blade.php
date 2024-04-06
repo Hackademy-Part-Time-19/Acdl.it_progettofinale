@@ -15,7 +15,8 @@
         {{-- <a href="{{ route('home') }}"> <img class="w-8" src="{{asset('storage/LogoPresto.png')}}" alt="" srcset=""></a> --}}
 
         @auth
-            <p style="font-weight: 1600; padding-left: 30px;color: #eeeae8; font-size:20px;margin-bottom:0px;">Benvenuto
+            <p style="font-weight: 1600; padding-left: 30px;color: #eeeae8; font-size:20px;margin-bottom:0px;">
+                {{ __('messages.Benvenuto') }}
                 {{ Auth::user()->name }}</p>
         @endauth
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -26,6 +27,9 @@
             <div style="display: flex;flex:1">
 
             </div>
+
+
+
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 linkNavBar">
                 <li class="nav-item">
                     <a style="color: #eeeae8; font-size:20px" class="nav-link active" aria-current="page"
@@ -34,7 +38,7 @@
                 <li class="nav-item dropdown">
                     <a style="color: #eeeae8; font-size:20px"class="nav-link dropdown-toggle" href="#"
                         id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie
+                        {{ __('messages.Categorie') }}
                     </a>
 
                     <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
@@ -49,10 +53,12 @@
                     </ul>
                 </li>
 
+
                 @auth
                     <li class="nav-item">
-                        <a style="color: #eeeae8; font-size:20px"class="nav-link" href="{{ route('ads.create') }}">Inserisci
-                            un annuncio</a>
+                        <a style="color: #eeeae8; font-size:20px"class="nav-link"
+                            href="{{ route('ads.create') }}">{{ __('messages.InserisciAnnuncio') }}
+                        </a>
                     </li>
 
                     @if (Auth::user()->is_revisor)
@@ -60,7 +66,7 @@
                             <a style="color:#eeeae8; font-size:20px"
                                 class="nav-link btn btn-outline-succes btn-sm position-relative" aria-current="page"
                                 href="{{ route('revisor.index') }}">
-                                Area revisore
+                                {{ __('messages.AreaRevisore') }}
                                 <span style="color: #eeeae8; font-size:20px"
                                     class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                     {{ App\Models\Ad::toBeRevisionedCount() }}
@@ -75,12 +81,12 @@
                 @guest
                     <li class="nav-item">
                         <a style="color:#eeeae8; font-size:20px" class="nav-link active" aria-current="page"
-                            href="/login">Login</a>
+                            href="/login">{{ __('messages.Login') }}</a>
                     </li>
 
                     <li class="nav-item">
                         <a style="color:#eeeae8; font-size:20px" class="nav-link active" aria-current="page"
-                            href="/register">Registrati</a>
+                            href="/register">{{ __('messages.Registrazione') }}</a>
 
                     </li>
                 @endguest
@@ -129,27 +135,30 @@
                             padding: 10px 15px;
                             }
                             }"
-                                type="submit" class="button-46" role="button">Logout</button>
+                                type="submit" class="button-46" role="button"> {{ __('messages.Logout') }}</button>
                         </form>
                     </li>
                 @endauth
             </ul>
             <form action="{{ route('ads.search') }}" method="GET" class="d-flex">
                 @csrf
-                <input type="search" name="searched" class="form-control me-2" placeholder="search"
-                    aria-label="search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input type="search" name="searched" class="form-control me-2"
+                    placeholder="{{ __('messages.Cerca') }}" aria-label="search">
+                <button class="btn btn-outline-success" type="submit">{{ __('messages.Cerca') }}</button>
             </form>
 
-            <div class="bandiera">
-                <x-flag-language-en />
+            <div>
+                <a class="bandiera" href="{{ route('set_language_locale', 'en') }}"><x-flag-language-en /></a>
+
+            </div>
+            <div>
+                <a class="bandiera" href="{{ route('set_language_locale', 'it') }}"><x-flag-language-it /></a>
             </div>
             <div class="bandiera">
-                <x-flag-language-it />
+                <a class="bandiera" href="{{ route('set_language_locale', 'es') }}"><x-flag-language-es /></a>
             </div>
-            <div class="bandiera">
-                <x-flag-language-es />
-            </div>
+
+
 
 
         </div>
