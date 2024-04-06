@@ -31,9 +31,9 @@
                         </div>
                     @empty
                         <div class="col-12">
-                            <p class="h3">Non sono presenti annunci per questa categoria!</p>
+                            <p class="h3">{{ __('messages.NoAnnunci') }}</p>
                             <br>
-                            <a href="{{ route('ads.create') }}" class= "btn-ads">Inserisci un nuovo annuncio</a>
+                            <a href="{{ route('ads.create') }}" class= "btn-ads">{{ __('messages.NuovoAnnuncio') }}</a>
                             </br>
                         </div>
                     @endforelse
