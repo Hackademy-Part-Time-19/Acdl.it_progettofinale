@@ -8,7 +8,7 @@ return [
   'Registrazione' => 'Registrazione',
   'Login' => 'Login',
   'Cerca' => 'Cerca',
-  'Lavora' => 'Lavora con noi',
+  'Lavora' => 'Lavora con noi', 
   'DiventaRevisore' => 'Diventa revisore',
   'Candidatura' => 'Invia la tua candidatura',
   'Sviluppo' => 'Developed by aclm.it',
@@ -73,4 +73,5 @@ return [
 
   'Grazie' => 'Grazie per averci contattato!',
   'Complimenti' => 'Complimenti! Sei diventato revisore!',
+  'NoAdCategoria' => 'Non sono presenti annunci per questa ricerca!'
 ];

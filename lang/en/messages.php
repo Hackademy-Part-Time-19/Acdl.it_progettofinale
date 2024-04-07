@@ -70,5 +70,6 @@ return [
   'EsploraAnnunci' => 'Explore our ads',
 
   'Grazie' => 'Thank you for contacting us!',
-  'Complimenti' => 'Congratulations! You have become an ad reviewer!'
+  'Complimenti' => 'Congratulations! You have become an ad reviewer!',
+  'NoAdCategoria' => 'There are no ads for this search!'
 ];

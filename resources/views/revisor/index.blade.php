@@ -10,22 +10,37 @@
             </div>
         </div>
         @if ($ad_to_check)
-            <div class="container">
+            <div class="container" style="margin-top: 50px">
                 <div class="row">
                     <div class="col-12">
                         <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="" class="img-fluid p-3 rounded" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="" class="img-fluid p-3 rounded" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="" class="img-fluid p-3 rounded" alt="...">
-                                </div>
+                            @if ($ad_to_check->images)
+                                <div class="carousel-inner">
+                                    @foreach ($ad_to_check->images as $image)
+                                        <div class="carousel-item @if ($loop->first) active @endif">
+                                            <img src="{{ Storage::url($image->path) }}" class="img-fluid p-3 rounded"
+                                                alt="...">
+                                        </div>
+                                    @endforeach
 
-                            </div>
+                                </div>
+                            @else
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="storage/LogoPresto.png" 
+                                        class="card-img-top rounded" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://img.freepik.com/free-photo/pretty-european-woman-casual-sweater-with-megaphone-pink-wall_343596-5823.jpg?w=1480&t=st=1711559198~exp=1711559798~hmac=b9f231830afae4a458d3777e15cb852ba20a570a1bf3f322abcb82343ef443b3" class="img-fluid p-3 rounded"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://img.freepik.com/free-photo/pretty-european-woman-casual-sweater-with-megaphone-pink-wall_343596-5823.jpg?w=1480&t=st=1711559198~exp=1711559798~hmac=b9f231830afae4a458d3777e15cb852ba20a570a1bf3f322abcb82343ef443b3" class="img-fluid p-3 rounded"
+                                            alt="...">
+                                    </div>
+                                </div>
+                            @endif
+
                             <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel"
                                 data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -66,5 +81,5 @@
     <div style="height: 80px">
 
     </div>
-    
+
 </x-layout>

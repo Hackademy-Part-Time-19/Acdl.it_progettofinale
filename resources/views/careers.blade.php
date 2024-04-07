@@ -1,5 +1,6 @@
 <x-layout>
     <h1 style="margin-top:50px;">{{ __('messages.Lavora') }}</h1>
+    <h1 style="margin-top:50px;">{{ __('messages.Lavora') }}</h1>
 
     <div class="container my-5">
         <div class="row justify-content-center align-items-center border rounded p-2 shadow">

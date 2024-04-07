@@ -15,7 +15,7 @@
 <body style="background-image:src="{{ asset('storage/LogoPresto.png') }}; hight:100%">
     <div id="contenitore" style="margin-top: 30px">
 
-        <x-navbar />
+        <x-navbar/>
         {{ $slot }}
         @livewireScripts
 

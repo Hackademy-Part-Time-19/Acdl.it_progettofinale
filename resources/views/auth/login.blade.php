@@ -5,6 +5,7 @@
                 <form class="mt-5" action="/login" method="POST">
                     @csrf
                     <h1>{{ __('messages.Accedi') }}</h1>
+                    <h1>{{ __('messages.Accedi') }}</h1>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
                         <input name="email" type="email" class="form-control" id="email">
@@ -22,7 +23,7 @@
                     @enderror
                     <br>
                     <p>{{ __('messages.NoRegistrato?') }}<a
-                        href="{{ route('register') }}"><br>{{ __('messages.CliccaQui') }}</a></p>
+                            href="{{ route('register') }}"><br>{{ __('messages.CliccaQui') }}</a></p>
                     <button type="submit" class="btn-primary">Login</button>
                 </form>
             </div>

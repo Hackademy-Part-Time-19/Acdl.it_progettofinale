@@ -8,7 +8,7 @@ return [
   'Registrazione' => 'Registrarse',
   'Login' => 'Iniciar sesión',
   'Cerca' => 'Buscar',
-    'Lavora' => 'Trabaja con nosotros',
+  'Lavora' => 'Trabaja con nosotros',
   'DiventaRevisore' => ' Conviértete en revisor.',
   'Candidatura' => 'Envía tu solicitud',
   'Sviluppo' => 'Desarrollado por aclm.it',
@@ -69,5 +69,6 @@ return [
   'EsploraAnnunci' =>'Explora nuestros anuncios',
 
   'Grazie' => 'Gracias por ponerse en contacto con nosotros',
-  'Complimenti' => 'Enhorabuena! Te has convertido en revisor.'
+  'Complimenti' => 'Enhorabuena! Te has convertido en revisor.',
+  'NoAdCategoria' => 'No hay anuncios para esta búsqueda',
 ];
