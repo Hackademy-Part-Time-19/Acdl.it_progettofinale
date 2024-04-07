@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-12 text-light p-5">
                     <h6 class="display-5" style="color: rgb(36, 22, 49);">
-                        {{ $ad_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare' }}
+                        {{ $ad_to_check ? __('messages.AnnuncioRevisione') : __('messages.NoAnnunciRevisione') }}
                     </h6>
                 </div>
             </div>
@@ -38,9 +38,10 @@
                             </button>
 
                         </div>
-                        <h5 class="card-title">Titolo: {{ $ad_to_check->title }}</h5>
-                        <p class="card-text">Descrizione: {{ $ad_to_check->description }}</p>
-                        <p class="card-footer">Pubblicato il: {{ $ad_to_check->created_at->format('d/m/y H:i') }}</p>
+                        <h5 class="card-title"> {{ __('messages.TitoloAnnuncio') }}: {{ $ad_to_check->title }}</h5>
+                        <p class="card-text">{{ __('messages.Descrizione') }}: {{ $ad_to_check->description }}</p>
+                        <p class="card-footer">{{ __('messages.Pubblicato') }}:
+                            {{ $ad_to_check->created_at->format('d/m/y H:i') }}</p>
                     </div>
                 </div>
                 <div class="row">
@@ -48,14 +49,14 @@
                         <form action="{{ route('revisor.accept_ad', ['ad' => $ad_to_check]) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn btn-succes shadow">Accetta</button>
+                            <button type="submit" class="btn btn-succes shadow">{{ __('messages.Accetta') }}</button>
                         </form>
                     </div>
                     <div class="col-12 col-md-6 text-end">
                         <form action="{{ route('revisor.reject_ad', ['ad' => $ad_to_check]) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
+                            <button type="submit" class="btn btn-danger shadow">{{ __('messages.Rifiuta') }}</button>
                         </form>
                     </div>
                 </div>

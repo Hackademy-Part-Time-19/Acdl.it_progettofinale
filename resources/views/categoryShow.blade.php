@@ -2,7 +2,7 @@
     <div class="box-category p-5 mb-4">
         <div class="row">
             <div class="col-12 p-5">
-                <h1 style="color: #1E3A3A">Esplora la categoria {{ $category->name }}<h1>
+                <h1 style="color: #1E3A3A">{{ __('messages.EsploraCategoria') }} {{ $category->name }}<h1>
             </div>
         </div>
     </div>
@@ -20,19 +20,19 @@
                                     <h5 class="card-title">{{ $ad->title }}</h5>
                                     <p class="card-text">{{ $ad->description }}</p>
                                     <p class="card-text">{{ $ad->price }}</p>
-                                    <a href="{{ route('ads.show', compact('ad')) }}"class="btn btn-detail ">Visualizza
-                                        dettagli</a>
+                                    <a href="{{ route('ads.show', compact('ad')) }}"class="btn btn-detail ">{{ __('messages.VisualizzaDettagli') }}
+                                    </a>
 
-                                    <p class='card-footer my-2'>Pubblicato il {{ $ad->created_at->format('d/m/Y H:i') }}
+                                    <p class='card-footer my-2'>{{ __('messages.Pubblicato') }} {{ $ad->created_at->format('d/m/Y H:i') }}
 
                                 </div>
                             </div>
                         </div>
                     @empty
                         <div class="col-12">
-                            <p class="h3">Non sono presenti annunci per questa categoria!</p>
+                            <p class="h3">{{ __('messages.NoAnnunci') }}</p>
                             <br>
-                            <a href="{{ route('ads.create') }}" class= "btn-ads">Inserisci un nuovo annuncio</a>
+                            <a href="{{ route('ads.create') }}" class= "btn-ads">{{ __('messages.NuovoAnnuncio') }}</a>
                             </br>
                         </div>
                     @endforelse

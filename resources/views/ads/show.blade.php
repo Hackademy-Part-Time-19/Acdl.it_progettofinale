@@ -37,13 +37,13 @@
                 </div>
                 <h5 class="card-title">{{ $ad->title }}</h5>
                 <p class="card-text">{{ $ad->description }}</p>
-                <p class="card-text">{{ $ad->price }}</p>
+                <p class="card-text">€ {{ $ad->price }}</p>
 
                 <a href="{{ route('categoryShow', ['category' => $ad->category]) }}"
                     class="my-2 border-top pt-2 border-dark card-link shadow btn btn-start">
-                    Categoria:
-                    {{ $ad->category->name }}</a>
-                <p class='card-footer'>Pubblicato il {{ $ad->created_at->format('d/m/Y') }}
+                    {{ __('messages.Categoria') }}:
+                    {{ __('messages.categoria_' . $ad->category->id) }}</a>
+                <p class='card-footer'>{{ __('messages.Pubblicato') }} {{ $ad->created_at->format('d/m/Y') }}
             </div>
         </div>
     </div>

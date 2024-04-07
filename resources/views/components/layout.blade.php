@@ -13,7 +13,7 @@
 </head>
 
 <body style="background-image:src="{{ asset('storage/LogoPresto.png') }}; hight:100%">
-    <div id="contenitore">
+    <div id="contenitore" style="margin-top: 30px">
 
         <x-navbar />
         {{ $slot }}

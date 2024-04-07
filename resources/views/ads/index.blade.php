@@ -3,7 +3,7 @@
         <div class="container-fluid p-5 shadow mb-2" style="margin-bottom: 0">
         
             <div class="row">
-                <h1 class="display-5" style="color:#1E3A3A; text-align:center"> Esplora i nostri annunci</h1>
+                <h1 class="display-5" style="color:#1E3A3A; text-align:center"> {{ __('messages.EsploraAnnunci') }}</h1>
             </div>
         
     </div>
@@ -22,10 +22,9 @@
                                                 <p class="card-text">{{ $ad->description }}</p>
                                                 <p class="card-text">€ {{ $ad->price }}</p>
                                                 <a
-                                                    href="{{ route('ads.show', compact('ad')) }}"class="btn btn-secondary">Visualizza
-                                                    dettagli</a>
+                                                    href="{{ route('ads.show', compact('ad')) }}"class="btn btn-secondary">{{ __('messages.VisualizzaDettagli') }}</a>
 
-                                                <p class='card-footer my-2'>Pubblicato il
+                                                <p class='card-footer my-2'>{{ __('messages.Pubblicato') }}
                                                     {{ $ad->created_at->format('d/m/Y H:i') }}
                                                 </p>
 
