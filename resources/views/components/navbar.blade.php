@@ -1,7 +1,5 @@
-<nav class="navbar navbar-expand-lg" style="padding:0px 0px 0px 0px; position:fixed;top:0;width:100%;z-index:600;">
-    <div class="container-fluid p-1"
-        style="background-image: linear-gradient(to left, #A87C7C 0%, #3F2E3E 100%);background-size: 200% auto; height:80px">
-
+<nav class="navbar navbar-expand-lg" style="position:fixed; width:100%;z-index:600;">
+    <div class="container-fluid p-1" style="background-image: linear-gradient(to left, #A87C7C 0%, #3F2E3E 100%);background-size: 200% auto; height:80px">
         <div class="col-4">
             <a href="{{ route('home') }}"> <img style="width: 50%;heigth:50%" src="{{ asset('storage/LogoPresto.png') }}"
                     alt="" srcset=""></a>
@@ -15,24 +13,23 @@
         {{-- <a href="{{ route('home') }}"> <img class="w-8" src="{{asset('storage/LogoPresto.png')}}" alt="" srcset=""></a> --}}
 
         @auth
-            <p style="font-weight: 1600; padding-left: 30px;color: #eeeae8; font-size:20px;margin-bottom:0px;">Benvenuto
+            <p style="font-weight: 800; padding-left: 20px; color:#eeeae8; font-size:16px; margin-bottom:0px;">Benvenuto
                 {{ Auth::user()->name }}</p>
         @endauth
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+       {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav" style="display: flex; align-items: left;">
+            <span class="navbar-toggler-icon"></span> </button>--}}
+        <div class="collapse navbar-collapse" id="navbarNav" style="display: flex; align-items: center;">
             <div style="display: flex;flex:1">
 
             </div>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 linkNavBar">
                 <li class="nav-item">
-                    <a style="color: #eeeae8; font-size:20px" class="nav-link active" aria-current="page"
+                    <a style="color: #eeeae8; font-size:14px" class="nav-link active" aria-current="page"
                         href=" {{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a style="color: #eeeae8; font-size:20px"class="nav-link dropdown-toggle" href="#"
+                    <a style="color: #eeeae8; font-size:14px"class="nav-link dropdown-toggle" href="#"
                         id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
                     </a>
@@ -51,20 +48,20 @@
 
                 @auth
                     <li class="nav-item">
-                        <a style="color: #eeeae8; font-size:20px"class="nav-link" href="{{ route('ads.create') }}">Inserisci
+                        <a style="color: #eeeae8; font-size:14px"class="nav-link" href="{{ route('ads.create') }}">Inserisci
                             un annuncio</a>
                     </li>
 
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item">
-                            <a style="color:#eeeae8; font-size:20px"
-                                class="nav-link btn btn-outline-succes btn-sm position-relative" aria-current="page"
+                            <a style="color:#eeeae8; font-size:14px"
+                                class="nav-link btn  btn-sm position-relative" aria-current="page"
                                 href="{{ route('revisor.index') }}">
                                 Area revisore
-                                <span style="color: #eeeae8; font-size:20px"
+                                <span style="color: #eeeae8; font-size:14px"
                                     class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                     {{ App\Models\Ad::toBeRevisionedCount() }}
-                                    <span style="color: #eeeae8; font-size:20px" class="visually-hidden">unread
+                                    <span style="color: #eeeae8; font-size:14px" class="visually-hidden">unread
                                         messages</span>
                                 </span>
                             </a>
@@ -74,12 +71,12 @@
                 @endauth
                 @guest
                     <li class="nav-item">
-                        <a style="color:#eeeae8; font-size:20px" class="nav-link active" aria-current="page"
+                        <a style="color:#eeeae8; font-size:14px" class="nav-link active" aria-current="page"
                             href="/login">Login</a>
                     </li>
 
                     <li class="nav-item">
-                        <a style="color:#eeeae8; font-size:20px" class="nav-link active" aria-current="page"
+                        <a style="color:#eeeae8; font-size:14px" class="nav-link active" aria-current="page"
                             href="/register">Registrati</a>
 
                     </li>
@@ -88,8 +85,7 @@
                     <li style="margin-top: 5px; margin-left: 10px" class="nav-item">
                         <form style="margin-right: 10px" action="/logout" method="POST">
                             @csrf
-                            <button
-                                style="
+                            <button style="
                             align-items: center;
                             background-color: rgba(175, 175, 175, 0.26);
                             border: 1px solid #eeeae8;
@@ -124,7 +120,7 @@
 
                             @media (min-width: 768px) {
                             .button-46 {
-                            font-size: 20px;
+                            font-size: 5px;
                             min-width: 200px;
                             padding: 10px 15px;
                             }
@@ -138,7 +134,7 @@
                 @csrf
                 <input type="search" name="searched" class="form-control me-2" placeholder="search"
                     aria-label="search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <button class="btn btn-outline-light" type="submit">Search</button>
             </form>
 
             <div class="bandiera">
