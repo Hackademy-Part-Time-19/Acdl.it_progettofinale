@@ -5,6 +5,7 @@ use Illuminate\Support\ServiceProvider;
 use Laravel\Scout\ScoutServiceProvider;
 use TeamTNT\Scout\TNTSearchScoutServiceProvider;
 
+
 return [
 
     /*
