@@ -5,8 +5,7 @@
                 <span class="subheading">{{ __('messages.Lavora') }}</span>
                 <h3 class="heading-section">{{ __('messages.DiventaRevisore') }}</h3>
                 <div style="margin-top: 2rem">
-                    <button type="button" class="btn-start"> <a style="color: rgb(97, 91, 91)"
-                            href="{{ route('careers') }}">{{ __('messages.Candidatura') }}
+                    <button class="btn-Footer"> <a style="text-decoration: none;" href="{{ route('careers') }}">{{ __('messages.Candidatura') }}
                         </a></button>
                 </div>
             </div>
