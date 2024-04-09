@@ -2,8 +2,8 @@
     <div class="container-fluid p-1"
         style="background-image: linear-gradient(to left, #A87C7C 0%, #3F2E3E 100%);background-size:100% ;">
         <div class="col-4">
-            <a href="{{ route('home') }}"> <img style="width:50%; padding :10px" src="{{ asset('storage/LogoPresto.png') }}"
-                    alt="" srcset=""></a>
+            <a href="{{ route('home') }}"> <img style="width:20%; padding :10px"
+                    src="{{ asset('storage/LogoPresto.png') }}" alt="" srcset=""></a>
         </div>
         <div>
             @auth
@@ -130,9 +130,9 @@
         <div>
             <a class="bandiera" href="{{ route('set_language_locale', 'it') }}"><x-flag-language-it /></a>
         </div>
-        <div >
+        <div>
             <a class="bandiera" href="{{ route('set_language_locale', 'es') }}"><x-flag-language-es /></a>
-</div>
+        </div>
     </div>
 
 </nav>

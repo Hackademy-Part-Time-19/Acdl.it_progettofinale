@@ -67,11 +67,13 @@ class CreateAds extends Component
     public function store()
     {
 
+
         $this->validate();
 
         $this->ad = Category::find($this->category)->ads()->create($this->validate());
         if (count($this->images)) {
             $newFileName = "ad/{$this->ad->id}";
+
             foreach ($this->images as $image) {
                 //$this->ad->images()->create(['path' => $image->store('images', 'public')]);
                 $newImage = $this->ad->images()->create(['path' => $image->store($newFileName, 'public')]);
@@ -81,6 +83,7 @@ class CreateAds extends Component
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
+
         /*
          $category = Category::find($this->category);
          $ad = $category->ads()->create([
