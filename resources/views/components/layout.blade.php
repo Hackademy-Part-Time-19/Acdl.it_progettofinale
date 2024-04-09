@@ -12,10 +12,10 @@
     @livewireStyles
 </head>
 
-<body style="background-color: #eeeae8; hight:100%">
-    <div id="contenitore">
+<body style="background-image:src="{{ asset('storage/LogoPresto.png') }}; hight:100%">
+    <div id="contenitore" style="margin-top: 30px">
 
-        <x-navbar />
+        <x-navbar/>
         {{ $slot }}
         @livewireScripts
 
