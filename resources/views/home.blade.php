@@ -13,12 +13,11 @@
         <div style="position: absolute; top: 150px; left: 30px;z-index: 500;width:30%;">
             <h2 style="font-weight:900;color:white;">{{ __('messages.Introduzione') }}
                 </h1>
-                <button type="button" class="btn-primary"> <a style=" text-decoration:none;color:" href="/register">{{ __('messages.Registrazione') }} </a></button>
+                <button type="button" class="btn-image"> <a style=" text-decoration:none;" href="/register">{{ __('messages.Registrazione') }} </a></button>
         </div>
-        <img src="https://img.freepik.com/free-photo/pretty-european-woman-casual-sweater-with-megaphone-pink-wall_343596-5823.jpg?w=1480&t=st=1711559198~exp=1711559798~hmac=b9f231830afae4a458d3777e15cb852ba20a570a1bf3f322abcb82343ef443b3"
-            alt="HomeImage" srcset="" style="object-fit: cover;height:70vh;width:100%">
+        <img src="{{ asset('storage/ImgHome.jpeg') }}" alt="HomeImage" srcset="" style="object-fit: cover;height:70vh;width:100%">
     </div>
-    <h1 style="text-align:center">{{ __('messages.AnnunciHome') }}</h1>
+    <h2 style="text-align:center">{{ __('messages.AnnunciHome') }}</h2>
     <div>
         <div class="row justify-content-md-center">
             @foreach ($ads as $ad)
@@ -34,9 +33,10 @@
                         </div>
                         <div style="margin: 20px">
                             <a href="{{ route('ads.show', compact('ad')) }}"
-                                class="btn-detail">{{ __('messages.Dettagli') }}<a>
-                                    <a href="{{ route('categoryShow', ['category' => $ad->category]) }}"
-                                        class="btn-detail">
+                                class="btnDetail">{{ __('messages.Dettagli') }}<a>
+
+                                    <a href ="{{ route('categoryShow', ['category' => $ad->category]) }}"
+                                         class="btnCategory">
                                         {{ __('messages.categoria_' . $ad->category->id) }} </a>
                                     <p style="margin-top: 20px" class='card-footer'>{{ __('messages.Pubblicato') }}:
                                         {{ $ad->created_at->format('d/m/Y H:i') }}</p>

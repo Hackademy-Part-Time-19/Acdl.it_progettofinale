@@ -50,7 +50,7 @@
                         <a style="color:#eeeae8; font-size:16px" class="nav-link btn  btn-sm position-relative"
                             aria-current="page" href="{{ route('revisor.index') }}">
                             {{ __('messages.AreaRevisore') }}
-                            <span style="color: #eeeae8; font-size:20px"
+                            <span style="color: #eeeae8; font-size:14px"
                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 {{ App\Models\Ad::toBeRevisionedCount() }}
                                 <span style="color: #eeeae8; font-size:14px" class="visually-hidden">unread
