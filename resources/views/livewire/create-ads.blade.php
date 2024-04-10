@@ -63,10 +63,10 @@
                         <div class="row">
                             <div class="col-12">
                                 <p>Foto preview: </p>
-                                <div class="row border-4 border-info rounded shadow py-4">  
+                                <div class="row border-4 border-info rounded shadow py-4">
                                     @foreach ($images as $key => $image)
                                       <div class="col my-3">
-                                        <div class=" mx-auto shadow rounded " style="width: 500px; height: 500px; background-image: url({{$image->temporaryUrl()}}); background-size: cover" >
+                                        <div class=" mx-auto shadow rounded " style="width: 300px; height: 300px; background-image: url({{$image->temporaryUrl()}}); background-size: cover" >
                                         </div>
                                         <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
                                       </div>
@@ -81,7 +81,7 @@
                             {{ session('message') }}
                         </div>
                     @endif
-                    <button style="border-radius:2px" type="submit" class="submit">{{ __('messages.Salva') }}</button>
+                    <button  type="submit" class="btn-primary">{{ __('messages.Salva') }}</button>
                 </form>
             </div>
         </div>
