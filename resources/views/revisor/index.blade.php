@@ -15,28 +15,50 @@
                     <div class="col-12">
                         <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
                             @if ($ad_to_check->images)
-                                <div class="carousel-inner">
-                                    @foreach ($ad_to_check->images as $image)
-                                        <div class="carousel-item @if ($loop->first) active @endif">
-                                            <img src="{{ Storage::url($image->path) }}" class="img-fluid p-3 rounded"
-                                                alt="...">
-                                        </div>
-                                    @endforeach
 
-                                </div>
+                                @foreach ($ad_to_check->images as $image)
+                                    <div class="card mb-3">
+                                        <div class="row p-2">
+                                            <div class="col-12 col-md-6">
+                                                <img src="{{ $image }}" class="img-fluid p-3 rounded"
+                                                    alt="...">
+                                            </div>
+                                            <div class="col-md-3 border-end">
+                                                <h5 class="tc-accent mt-3">Tags</h5>
+                                                <div class="p-2">
+                                                    @if ($image->labels)
+                                                        @foreach ($image->labels as $label)
+                                                            <p class="d-inline">{{ $label }},</p>
+                                                        @endforeach
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card-body">
+                                                    <h5 class="tc-accent">Revisione immagini</h5>
+                                                    <p>Adulti: <span class="{{ $image->adult }}"></span></p>
+                                                    <p>Satira: <span class="{{ $image->spoof }}"></span></p>
+                                                    <p>Medicina: <span class="{{ $image->medical }}"></span></p>
+                                                    <p>Violenza: <span class="{{ $image->violence }}"></span></p>
+                                                    <p>Contenuto ammiccante: <span class="{{ $image->racy }}"></span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
                             @else
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="storage/LogoPresto.png" 
-                                        class="card-img-top rounded" alt="...">
+                                        <img src="storage/LogoPresto.png" class="card-img-top rounded" alt="...">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://img.freepik.com/free-photo/pretty-european-woman-casual-sweater-with-megaphone-pink-wall_343596-5823.jpg?w=1480&t=st=1711559198~exp=1711559798~hmac=b9f231830afae4a458d3777e15cb852ba20a570a1bf3f322abcb82343ef443b3" class="img-fluid p-3 rounded"
-                                            alt="...">
+                                        <img src="https://img.freepik.com/free-photo/pretty-european-woman-casual-sweater-with-megaphone-pink-wall_343596-5823.jpg?w=1480&t=st=1711559198~exp=1711559798~hmac=b9f231830afae4a458d3777e15cb852ba20a570a1bf3f322abcb82343ef443b3"
+                                            class="img-fluid p-3 rounded" alt="...">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://img.freepik.com/free-photo/pretty-european-woman-casual-sweater-with-megaphone-pink-wall_343596-5823.jpg?w=1480&t=st=1711559198~exp=1711559798~hmac=b9f231830afae4a458d3777e15cb852ba20a570a1bf3f322abcb82343ef443b3" class="img-fluid p-3 rounded"
-                                            alt="...">
+                                        <img src="https://img.freepik.com/free-photo/pretty-european-woman-casual-sweater-with-megaphone-pink-wall_343596-5823.jpg?w=1480&t=st=1711559198~exp=1711559798~hmac=b9f231830afae4a458d3777e15cb852ba20a570a1bf3f322abcb82343ef443b3"
+                                            class="img-fluid p-3 rounded" alt="...">
                                     </div>
                                 </div>
                             @endif

@@ -56,7 +56,7 @@
                             class="form-control shadow @error('temporary_images.*') is-invalid @enderror"
                             {{-- id="image" --}} placeholder="Img" />
 
-                        @error('temporary_images.*')
+                        @error('temporary_images')
                             <p>{{ $message }}</p>
                         @enderror
                     </div>
