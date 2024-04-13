@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Jobs;
 
 use Spatie\Image\Image as SpatieImage;
