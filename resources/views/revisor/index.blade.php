@@ -20,17 +20,17 @@
                                     <div class="card mb-3">
                                         <div class="row p-2">
                                             <div class="col-12 col-md-6">
-                                                <img src="{{ $image }}" class="img-fluid p-3 rounded"
+                                                <img src="{{ $image->getUrl(300, 300) }}" class="img-fluid p-3 rounded"
                                                     alt="...">
                                             </div>
                                             <div class="col-md-3 border-end">
                                                 <h5 class="tc-accent mt-3">Tags</h5>
                                                 <div class="p-2">
-                                                    @if ($image->labels)
-                                                        @foreach ($image->labels as $label)
-                                                            <p class="d-inline">{{ $label }},</p>
-                                                        @endforeach
-                                                    @endif
+
+                                                    @foreach ($image->labels as $label)
+                                                        <p class="d-inline">{{ $label }},</p>
+                                                    @endforeach
+
                                                 </div>
                                             </div>
                                             <div class="col-md-3">

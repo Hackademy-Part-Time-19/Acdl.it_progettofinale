@@ -2,7 +2,7 @@
 
 namespace App\Jobs;
 
-
+use Google\cloud\vision\v1\ImageAnnotatorClient;
 use App\Models\Image;
 use Spatie\Image\Image as SpatieImage;
 use Illuminate\Bus\Queueable;
@@ -10,6 +10,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Spatie\Image\Manipulations;
 
 class RemoveFaces implements ShouldQueue
@@ -22,7 +23,7 @@ class RemoveFaces implements ShouldQueue
      */
     public function __construct($ad_image_id)
     {
-        $this->ad_image_id
+        $this->ad_image_id = $ad_image_id;
     }
 
     /**
@@ -31,7 +32,7 @@ class RemoveFaces implements ShouldQueue
     public function handle(): void
     {
         $i = Image::find($this->ad_image_id);
-        if (!$i){
+        if (!$i) {
             return;
         }
         $srcPath = storage_path('app/public/' . $i->path);
@@ -44,11 +45,11 @@ class RemoveFaces implements ShouldQueue
         $response =  $imageAnnotator->faceDetection($image);
         $faces = $response->getFaceAnnotations();
 
-        foreach ($faces as $face){
+        foreach ($faces as $face) {
             $vertices = $face->getBoundingPoly()->getVertices();
 
-            $bounds=[];
-            foreach ($vertices as $vertex){
+            $bounds = [];
+            foreach ($vertices as $vertex) {
                 $bounds[] = [$vertex->getX(), $vertex->getY()];
             }
 
@@ -64,10 +65,9 @@ class RemoveFaces implements ShouldQueue
                 ->watermarkHeight($h, Manipulations::UNIT_PIXELS)
                 ->watermarkFit(Manipulations::FIT_STRETCH);
 
-            $image->save($srcPath); 
+            $image->save($srcPath);
         }
 
         $imageAnnotator->close();
-
     }
 }
