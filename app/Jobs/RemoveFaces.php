@@ -2,7 +2,8 @@
 
 namespace App\Jobs;
 
-use Google\cloud\vision\v1\ImageAnnotatorClient;
+use Google\Cloud\Vision\V1\ImageAnnotatorClient;
+
 use App\Models\Image;
 use Spatie\Image\Image as SpatieImage;
 use Illuminate\Bus\Queueable;
