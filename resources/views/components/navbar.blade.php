@@ -3,7 +3,7 @@
         style="background-image: linear-gradient(to left, #A87C7C 0%, #3F2E3E 100%);background-size:100% ;">
         <div class="col-4">
             <a href="{{ route('home') }}"> <img style="width:20%; padding :10px"
-                    src="{{ asset('storage/LogoPresto.png') }}" alt="" srcset=""></a>
+                    src="{{ asset('storage/LogoPresto1.png') }}" alt="" srcset=""></a>
         </div>
         <div>
             @auth
