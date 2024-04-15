@@ -1,8 +1,7 @@
-<nav class="navbar navbar-expand-lg" style="padding:0px 0px 0px 0px; position:fixed;top:0;width:100%;z-index:600;">
-    <div class="container-fluid p-1"
-        style="background-image: linear-gradient(to left, #A87C7C 0%, #3F2E3E 100%);background-size:100% ;">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="padding:0px 0px 0px 0px; position:fixed;top:0;width:100%;z-index:600; margin-bottom:50px";>
+    <div class="container-fluid " style="background-image: linear-gradient(to left, #A87C7C 0%, #3F2E3E 100%);background-size:100% ;">
         <div class="col-4">
-            <a href="{{ route('home') }}"> <img style="width:50%; padding :10px" src="{{ asset('storage/LogoPresto.png') }}"
+            <a href="{{ route('home') }}"> <img style="width:50%; padding:10px" src="{{ asset('storage/LogoPresto.png') }}"
                     alt="" srcset=""></a>
         </div>
         <div>
@@ -18,7 +17,7 @@
         <div class="collapse navbar-collapse" id="navbarNav" style="display: flex; align-items: center;">
 
         </div>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 linkNavBar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 linkNavBar" style="justify-content: center">
             <li class="nav-item">
                 <a style="color: #eeeae8; font-size:16px" class="nav-link active" aria-current="page"
                     href=" {{ route('home') }}">Home</a>
@@ -47,7 +46,7 @@
                 </li>
                 @if (Auth::user()->is_revisor)
                     <li class="nav-item">
-                        <a style="color:#eeeae8; font-size:16px" class="nav-link btn  btn-sm position-relative"
+                        <a style="color:#eeeae8; font-size:16px;text-align: left " class="nav-link btn  btn-sm position-relative"
                             aria-current="page" href="{{ route('revisor.index') }}">
                             {{ __('messages.AreaRevisore') }}
                             <span style="color: #eeeae8; font-size:14px"

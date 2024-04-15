@@ -13,6 +13,7 @@ return [
   'Candidatura' => 'Envía tu solicitud',
   'Sviluppo' => 'Desarrollado por aclm.it',
   'Introduzione' => 'Bienvenido a Presto.it, regístrese ahora e ingrese su anuncio.',
+  'Introduzione2' => 'Bienvenido a Presto.it. ¡Es hora de colocar tu anuncio!',
   'AnnunciHome' => 'Aquí están nuestros anuncios',
   'Dettagli' => 'Detalles',
   'CategoriaMotori' => 'Motores',
@@ -65,7 +66,7 @@ return [
   'Accetta' => 'Acceptar',
   'Rifiuta' => 'Rechazar',
   'Categoria' => 'Categoría',
-  
+
   'EsploraAnnunci' =>'Explora nuestros anuncios',
 
   'Grazie' => 'Gracias por ponerse en contacto con nosotros',
