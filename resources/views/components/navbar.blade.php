@@ -45,14 +45,13 @@
                     </a>
                 </li>
                 @if (Auth::user()->is_revisor)
-                    <li class="nav-item">
+                    <li class="nav-item ">
                         <a style="color:#eeeae8; font-size:16px;text-align: left " class="nav-link btn  btn-sm position-relative"
                             aria-current="page" href="{{ route('revisor.index') }}">
                             {{ __('messages.AreaRevisore') }}
-                            <span style="color: #eeeae8; font-size:14px"
-                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            <span style="color: #eeeae8; font-size:12px; margin-top:5px; margin-right:10px" class="position-absolute top-30 start-100 translate-middle badge rounded-pill bg-danger">
                                 {{ App\Models\Ad::toBeRevisionedCount() }}
-                                <span style="color: #eeeae8; font-size:14px" class="visually-hidden">unread
+                                <span style="color: #eeeae8; font-size:12px" class="visually-hidden">unread
                                     messages</span>
                             </span>
                         </a>
