@@ -9,6 +9,7 @@ use Illuminate\View\View;
 use App\Models\Ad;
 use Illuminate\Http\Request;
 
+
 class AdController extends Controller
 {
     /**
@@ -34,8 +35,12 @@ class AdController extends Controller
      */
     public function store(Request $request)
     {
+
         $validated = $request->validated();
+
+
         Ad::create(['author' => auth()->user()->name, 'title' => $validated['title'], 'description' => $validated['description'], 'price' => $validated['price']]);
+
         return redirect()->back()->with(['success' => 'Annuncio inserito con successo']);
     }
 
@@ -76,5 +81,3 @@ class AdController extends Controller
         return view('ads.show', compact('ad'));
     }
 }
-
-

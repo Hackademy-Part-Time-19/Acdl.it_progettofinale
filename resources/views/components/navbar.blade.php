@@ -129,9 +129,9 @@
         <div>
             <a class="bandiera" href="{{ route('set_language_locale', 'it') }}"><x-flag-language-it /></a>
         </div>
-        <div >
+        <div>
             <a class="bandiera" href="{{ route('set_language_locale', 'es') }}"><x-flag-language-es /></a>
-</div>
+        </div>
     </div>
 
 </nav>
