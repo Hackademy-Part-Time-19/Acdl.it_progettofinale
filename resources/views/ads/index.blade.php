@@ -1,39 +1,36 @@
 <x-layout>
     <div class="container">
-        <div class="container-fluid p-5 shadow mb-2" style="margin-bottom: 0">
+        <div class="box-category p-5 mb-4">
 
             <div class="row">
-                <h1 class="display-5" style="color:#1E3A3A; text-align:center"> {{ __('messages.EsploraAnnunci') }}</h1>
+                <h1 class="display-5" style="color:white; font-weight:600; text-align:center"> {{ __('messages.EsploraAnnunci') }}</h1>
             </div>
 
         </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="row" style="margin-top: 100px;">
-                    @forelse ($ads as $ad)
-                        <div class="col-md-3" style="margin-bottom: 70px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col" style="width:100%; display:flex;flex-direction:row;">
-                                        <div class="card shadow" style="width: 30rem;">
-                                            <img src="{{!$ad->images()->get()->isEmpty() ? Storage::url($ad->images()->first()->path): 'https://img.freepik.com/free-photo/pretty-european-woman-casual-sweater-with-megaphone-pink-wall_343596-5823.jpg?w=1480&t=st=1711559198~exp=1711559798~hmac=b9f231830afae4a458d3777e15cb852ba20a570a1bf3f322abcb82343ef443b3'  }}" 
-                                            class="card-img-top rounded" alt="...">
-                                            <div style="overflow: hidden; text-overflow: ellipsis" class="card-body">
-                                                <h5 class="card-title">{{ $ad->title }}</h5>
-                                                <p class="card-text">{{ $ad->description }}</p>
-                                                <p class="card-text">€ {{ $ad->price }}</p>
-                                                <a href="{{ route('ads.show', compact('ad')) }}"class="btn btn-secondary">{{ __('messages.VisualizzaDettagli') }}</a>
-                                                <p class='card-footer my-2'>{{ __('messages.Pubblicato') }}
-                                                    {{ $ad->created_at->format('d/m/Y H:i') }}
-                                                </p>
+        <div class="row justify-content-center">
 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="row justify-content-center" style="margin-top: 20px; background-color:red">
+                    @forelse ($ads as $ad)
+                    <div class="col-12 col-md-3 my-4" style="border-radius:10%;">
+                        <div class="cardAds">
+                            <img class="cardImg"
+                                src="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(300, 300) : 'storage/public/LogoPresto.png' }}"
+                                class="card-img-top rounded" alt="...">
+                            <div style="overflow: hidden; text-overflow: ellipsis;margin-right:10px; margin-left:15px;margin-top:10px"
+                                class="card-body">
+                                <h5 class="card-title" style="text-weight:800">{{ $ad->title }}</h5>
+                                <p class="card-text fw-light">{{ Str::limit($ad->description, 40) }}</p>
+                                <p class="card-text" style="font-size: 16px"> € {{ $ad->price }}</p>
+                                <a href="{{ route('ads.show', compact('ad')) }}"
+                                    class="btnDetail ">{{ __('messages.VisualizzaDettagli') }}
+                                </a>
+
+                                <p style="padding-bottom: 20px; padding-top:10px" class='card-footer'>
+                                    {{ __('messages.Pubblicato') }}:
+                                    {{ $ad->created_at->format('d/m/Y H:i') }}</p>
                             </div>
                         </div>
-
+                    </div>
 
                     @empty
                         <div class="col-12" style="margin-top:65px;">
@@ -46,7 +43,7 @@
 
 
                 </div>
-            </div>
+
         </div>
     </div>
 

@@ -5,8 +5,8 @@
                 <span class="subheading">{{ __('messages.Lavora') }}</span>
                 <h3 class="heading-section">{{ __('messages.DiventaRevisore') }}</h3>
                 <div style="margin-top: 2rem">
-                    <button class="btn-Footer"> <a style="text-decoration: none;" href="{{ route('careers') }}">{{ __('messages.Candidatura') }}
-                        </a></button>
+                    <a class="btnFooter" style="text-decoration:none;" href="{{ route('careers') }}">{{ __('messages.Candidatura') }}
+                        </a>
                 </div>
             </div>
         </div>

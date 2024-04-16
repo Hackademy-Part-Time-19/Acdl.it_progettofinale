@@ -1,13 +1,17 @@
 <x-layout>
-    <h1 style="margin-top:50px;">{{ __('messages.Lavora') }}</h1>
-    <h1 style="margin-top:50px;">{{ __('messages.Lavora') }}</h1>
+
+
+
+    <div class="container my-5" >
+    <h1>{{ __('messages.Lavora') }}</h1>
+</div>
 
     <div class="container my-5">
         <div class="row justify-content-center align-items-center border rounded p-2 shadow">
             <div class="col-12 col-md-6">
 
-                <h2>{{ __('messages.LavoraComeRevisore') }}</h2>
-                <p>{{ __('messages.LavoraNoi') }} </p>
+            <h2 >{{ __('messages.LavoraComeRevisore') }}</h2>
+            <p class="fw-light">{{ __('messages.LavoraNoi') }} </p>
             </div>
 
             <div class="col-12 col-md-6">
@@ -25,12 +29,12 @@
                     @csrf
 
 
-                    <div class="class mb-3">
+                     <div class="class mb-3">
                         <label for="message" class="form-label">{{ __('messages.ParlaciTe') }}</label>
                         <textarea name="message" id="message" cols="30" rows="7" class="form-control">{{ old('message') }}</textarea>
                     </div>
                     <div class="mt-2">
-                        <button class="btn btn-info text-white">{{ __('messages.Candidatura') }}</button>
+                        <button class="btn-primary">{{ __('messages.Candidatura') }}</button>
                     </div>
                 </form>
 

@@ -1,5 +1,11 @@
 @import'bootstrap';
 
+.alexandria{
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
 
 .bandiera{
 height: 20px;
@@ -16,7 +22,17 @@ a{
 text-decoration: none;
 }
 
+#showCarousel{
 
+margin-bottom:20px;
+border-radius: 20px;
+margin-top:20px;
+align-items: center;
+width:100%;
+height: 100%;
+box-shadow: rgb(0 0 0 / 30%) 0 0 12px;
+
+}
 
 body{
     min-width: 100%;
@@ -41,32 +57,49 @@ body{
     color: #e8e3e1;
 }
 
+
+
 .box-category {
 
 border-radius:40px;
 margin-left: 20px;
 margin-right: 20px;
-border: 3px solid #3F2E3E;
 height: 150px;
 justify-content: center;
 align-items:center ;
 display: flex;
 margin-top: 65px;
-
+background-color:#1E3A3A;
+box-shadow: rgb(0 0 0 / 30%) 0 0 12px;
+opacity:0.5;
 }
 
-.box img {
-border-radius: 40px;
+.boxImg {
+display: flex;
+border-radius: 50px;
 width: 100vw;
 padding-left: 10px;
 padding-right: 10px;
-margin-bottom: 20px;
-margin-top: 65px;
-justify-content: center;
+margin-bottom: 30px;
+margin-top: 30px;
+justify-content:center;
 align-items:center ;
 
 
   }
+
+.cardAds{
+border-radius: 20px;
+box-shadow: rgb(0 0 0 / 50%) 0 0 18px;
+background-color: #f0efef;
+}
+
+.cardImg{
+
+border-radius: 20px;
+width: 100%;
+
+}
 
 .btn-primary{
     padding: 17px 40px;
@@ -91,11 +124,14 @@ align-items:center ;
 }
 
 .btn-image{
-    padding: 17px 40px;
+display: flex;
+width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 17px 20px;
     border-radius: 50px;
     cursor: pointer;
-    border: 10px;
-    background-color: white;
+    background-color: #3F2E3E;
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -103,7 +139,7 @@ align-items:center ;
     transition: all 0.5s ease;
    text-decoration: none;
 color: #e8e3e1;
-
+margin-top: 20px;
 
 }
 
@@ -111,44 +147,19 @@ color: #e8e3e1;
 
 .btn-image:hover{
     letter-spacing: 2px;
-    background-color: #3F2E3E;
-    color: hsl(0, 0%, 100%);
-    box-shadow: rgba(97, 213, 180, 0.5)0px 7px 29px 0px;
+    background-color: #ffffff;
+    color: #3F2E3E;
+    box-shadow:  rgb(168 124 124 / 50%) 0 0 12px;
     text-decoration: none ;
 
 }
-
-.btn-start{
-    padding: 17px 40px;
-    border-radius: 50px;
-    cursor: pointer;
-    border: 10px;
-    background-color: white;
-    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-size: 14px;
-    transition: all 0.5s ease;
-    text-decoration: none
-
-
-
-}
-
-.btn-start:hover{
-    letter-spacing: 2px;
-    background-color: #3F2E3E;
-    color: hsl(0, 0%, 100%);
-    box-shadow: rgba(63, 46, 62, 0.5)0px 7px 29px 0px;
-}
-
 
 .btnDetail{
     padding: 17px 25px;
     border-radius: 50px;
     cursor: pointer;
     border: 10px;
-    background-color: white;
+    background-color: #3F2E3E;
     box-shadow: rgb(168 124 124 / 50%) 0 0 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -156,31 +167,33 @@ color: #e8e3e1;
     transition: all 0.5s ease;
     text-decoration: none;
     display: inline-block;
-    color: #3F2E3E;
+    color: #ffffff;
 }
 
 .btnDetail:hover{
     letter-spacing: 2px;
-    background-color: #3F2E3E;
-    color: hsl(0, 0%, 100%);
+    background-color:  #ffffff;
+    color: #3F2E3E;
     box-shadow:  rgb(168 124 124 / 50%) 0 0 12px;
 }
 
 .btnCategory{
-
-
-  padding: 0.7em 1.7em;
+display: flex;
+margin-top: 10px;
+width: 70%;
+text-align: center;
+justify-content: center;
+  padding: 10px 5px;
   font-size: 12px;
   border-radius: 0.5em;
-cursor: pointer;
+  cursor: pointer;
   border: 2px solid #1E3A3A;
   transition: all 0.3s;
   color: #1E3A3A;
   text-decoration: none;
 }
 .btnCategory:hover {
-
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     background-color: #1E3A3A;
     color: hsl(0, 0%, 100%);
     box-shadow: rgba(255, 255, 255, 0.5)0px 7px 29px 0px;
@@ -188,27 +201,29 @@ cursor: pointer;
   }
 
 
-.btn-Footer{
-    padding: 17px 25px;
+.btnFooter {
+
+    justify-content: center;
+text-align: center;
+    padding: 17px 40px;
     border-radius: 50px;
     cursor: pointer;
-    border: 10px;
-    background-color: white;
+    background-color:  #A87C7C;
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
     transition: all 0.5s ease;
-    text-decoration: none;
-    display: inline-block;
-    color: #3F2E3E;
+   text-decoration: none;
+color: #e8e3e1;
+margin-top: 20px;
 }
 
 
-.btn-Footer:hover{
+.btnFooter:hover{
     letter-spacing: 2px;
-    background-color: #A87C7C;
-    color: hsl(0, 0%, 100%);
+    background-color:white;
+    color: #A87C7C;
     box-shadow: rgba(255, 255, 255, 0.5)0px 7px 29px 0px;
     text-decoration: none;
 }
@@ -218,28 +233,31 @@ cursor: pointer;
     border-radius: 50px;
     cursor: pointer;
     border: 10px;
-    background-color: white;
-    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    background-color: #1E3A3A;
+
+    box-shadow: rgba(97, 213, 180, 0.5)0px x 0px 12px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-size: 14px;
     transition: all 0.5s ease;
     text-decoration:none;
-color: #3F2E3E;
+color: white;
 
 
 }
 
 .btn-ads:hover{
     letter-spacing: 2px;
-    background-color: #1E3A3A;
-    color: hsl(0, 0%, 100%);
-    box-shadow: rgba(97, 213, 180, 0.5)0px 7px 29px 0px;
+    background-color: white;
+    color:#3F2E3E;
+    box-shadow: rgb(0 0 0 / 30%) 0 0 8px;
+
 }
 
 .carousel {
     display: flex;
     overflow: hidden;
+
 }
 
 .carousel img {

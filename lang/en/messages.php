@@ -13,6 +13,7 @@ return [
   'Candidatura' => 'Submit your application',
   'Sviluppo' => 'Developed by aclm.it',
   'Introduzione' => 'Welcome to Presto.it, register now and post your ad.',
+  'Introduzione2'=> 'Welcome to Presto.it. It\'s time to place your ad!',
   'AnnunciHome' => 'Here are our announcements',
   'Dettagli' => 'Details',
   'CategoriaMotori' => 'Motors',
@@ -66,7 +67,7 @@ return [
   'Rifiuta' => 'Reject',
 
   'Categoria' => 'Category',
-  
+
   'EsploraAnnunci' => 'Explore our ads',
 
   'Grazie' => 'Thank you for contacting us!',
