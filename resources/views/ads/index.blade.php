@@ -9,7 +9,7 @@
         </div>
         <div class="row justify-content-center">
 
-                <div class="row justify-content-center" style="margin-top: 20px; background-color:red">
+                <div class="row justify-content-center" style="margin-top: 20px;">
                     @forelse ($ads as $ad)
                     <div class="col-12 col-md-3 my-4" style="border-radius:10%;">
                         <div class="cardAds">
